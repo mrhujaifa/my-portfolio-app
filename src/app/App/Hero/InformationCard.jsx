@@ -4,7 +4,7 @@ const ProfileInformation = () => {
   return (
     <div className="w-full  sm:px- md:px-8 py-8">
       <div className="relative w-full max-w-4xl mx-auto rounded-lg p-[2px]">
-        <div className="rounded-lg border border-gray-600 overflow-hidden bg-[#07041b]">
+        <div className="rounded-lg border border-gray-600 overflow-hidden ">
           {/* Header */}
           <div className="flex items-center px-4 py-2 w-full border-b border-gray-600">
             <div className="flex space-x-2">

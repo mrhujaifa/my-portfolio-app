@@ -7,7 +7,7 @@ import ProfileCard from "./InformationCard";
 
 const Hero = () => {
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16 py-10 lg:mt-0 mt-20">
+    <div className="w-full px-4 md:px-8 lg:px-16 py-10 lg:mt-45 mt-20">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left side */}
         <div className="w-full md:w-1/2 md:text-left">
