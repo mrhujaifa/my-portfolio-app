@@ -64,9 +64,9 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50">
-        <div className="container mx-auto px-5 flex items-center justify-between bg-black/50 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 shadow-lg">
+        <div className="container mx-auto md:pl-10 md:py-5 lg:py-3 flex items-center justify-between bg-black/50 backdrop-blur-md rounded-full px-5 lg:px-0 py-1 shadow-lg">
           {/* Logo */}
-          <div className="text-white font-bold lg:text-2xl text-xl flex items-center gap-2">
+          <div className="text-white  md:hidden lg:flex font-bold lg:text-2xl text-xl flex items-center gap-2">
             <Image
               src="/logos/My-logo.png"
               alt="Logo"
@@ -82,7 +82,7 @@ export default function Navbar() {
           </div>
 
           {/* Center Nav Items */}
-          <ul className="hidden md:flex items-center space-x-4 lg:space-x-6 text-white">
+          <ul className="hidden md:flex items-center space-x-4 text-white">
             {navItems.map((item, idx) => (
               <li key={idx}>
                 <a
@@ -108,30 +108,32 @@ export default function Navbar() {
             <a
               href="/resume.pdf"
               download
-              className="flex items-center gap-2 px-5 py-2  border border-purple-600 text-white rounded-lg text-sm font-semibold shadow-lg hover:scale-110 hover:shadow-xl transition-transform duration-300"
+              className="flex md:hidden lg:flex items-center gap-2 px-5 py-2  border border-purple-600 text-white rounded-lg text-sm font-semibold shadow-lg hover:scale-110 hover:shadow-xl transition-transform duration-300"
               aria-label="Download Resume"
             >
               <FaDownload />
               <span className="hidden sm:inline">Resume</span>
             </a>
-            <a
-              href="https://github.com/your-username"
-              target="_blank"
-              className="hover:text-[#a268ff]"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-            >
-              <FaGithub size={20} />
-            </a>
-            <a
-              href="https://linkedin.com/in/your-id"
-              target="_blank"
-              className="hover:text-[#a268ff]"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-            >
-              <FaLinkedin size={20} />
-            </a>
+            <div className="flex items-center gap-3  md:hidden lg:flex">
+              <a
+                href="https://github.com/your-username"
+                target="_blank"
+                className="hover:text-[#a268ff]"
+                rel="noopener noreferrer"
+                aria-label="GitHub Profile"
+              >
+                <FaGithub size={20} />
+              </a>
+              <a
+                href="https://linkedin.com/in/your-id"
+                target="_blank"
+                className="hover:text-[#a268ff]"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
+              >
+                <FaLinkedin size={20} />
+              </a>
+            </div>
           </div>
 
           {/* Mobile Hamburger */}

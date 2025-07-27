@@ -58,7 +58,7 @@ const AutoTypingWithDots = () => {
   const dots = ".".repeat(dotCount);
 
   return (
-    <div className="relative h-20 flex items-center  text-3xl sm:text-4xl font-semibold text-white overflow-hidden">
+    <div className="relative h-20 flex items-center  text-lg lg:text-3xl font-semibold text-white overflow-hidden">
       <AnimatePresence mode="wait">
         {!isAnimatingOut && (
           <motion.div
