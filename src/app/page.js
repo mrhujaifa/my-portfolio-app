@@ -5,8 +5,6 @@ import Hero from "./App/Hero/Hero";
 
 export default function Home() {
   return (
-    <div className="mt-60">
-      kjsadlfj;jf;saldfkja;sldkjf;lasdkjf;lasdkjf;laskdjf;lkasdjf;lkasdjf;lkasjdf;lkjasd;lfkjasd;lkfj;asdlkfj;lasdkjflaskdjf;lksadjf;lksadjf;lksadjflkasdjf;ksadjflkasdjflkasdjflkdasjflkasdjflkasdjfl;kjsdaf;lksadjflkjjdlkjflkadsjfl;kasdjf;lksadjfl;kjsdal;fkjsda;lfkjsda;lkfjsd;lkfj
-    </div>
+    <div></div>
   );
 }

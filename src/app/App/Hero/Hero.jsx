@@ -7,11 +7,11 @@ import ProfileCard from "./InformationCard";
 
 const Hero = () => {
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16 py-10">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+    <div className="w-full px-4 md:px-8 lg:px-16 py-10 lg:mt-0 mt-20">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left side */}
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <div className="p-[2px] w-fit mx-auto md:mx-0 rounded-full bg-gradient-to-r from-[#b3631f] via-[#c7c366] to-[#f5f5f5]">
+        <div className="w-full md:w-1/2 md:text-left">
+          <div className="p-[2px] w-fit  md:mx-0 rounded-full bg-gradient-to-r from-[#b3631f] via-[#c7c366] to-[#f5f5f5]">
             <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#07041b]">
               <Image
                 width={30}
@@ -52,11 +52,16 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col lg:flex-row lg:items-center gap-4">
             <button
-              className={`${styles.gradientBorder} px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-base sm:text-lg focus:outline-none focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50`}
+              className={`${styles.gradientBorder} w-full lg:w-auto px-6 py-3 sm:py-4 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-base sm:text-lg focus:outline-none focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50`}
             >
               Learn More
+            </button>
+            <button
+              className={`${styles.gradientBorder} w-full lg:w-auto px-6 py-3 sm:py-4 text-white bg-orange-3 font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-base sm:text-lg focus:outline-none focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50`}
+            >
+              Resume
             </button>
           </div>
         </div>

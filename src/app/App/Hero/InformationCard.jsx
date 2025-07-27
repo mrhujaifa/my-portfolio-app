@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfileInformation = () => {
   return (
-    <div className="w-full px-4 sm:px-6 md:px-8 py-8">
+    <div className="w-full  sm:px- md:px-8 py-8">
       <div className="relative w-full max-w-4xl mx-auto rounded-lg p-[2px]">
         <div className="rounded-lg border border-gray-600 overflow-hidden bg-[#07041b]">
           {/* Header */}
