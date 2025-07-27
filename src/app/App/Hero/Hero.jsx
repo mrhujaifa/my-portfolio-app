@@ -7,12 +7,12 @@ import ProfileCard from "./InformationCard";
 
 const Hero = () => {
   return (
-    <div className="w-full px-4 md:px-8 md:mt-30  py-10 lg:mt-45 lg:px-0 mt-20">
+    <div className="w-full px-4 md:px-8 md:mt-30  py-10 lg:mt-60 lg:px-0 mt-20">
       <div className="flex flex-col md:flex-col lg:flex-row items-center  justify-between gap-10">
         {/* Left side */}
         <div className="w-ful md:text-left">
           {/* Badge */}
-          <div className="p-[2px] w-fit md:mx-0 rounded-full bg-gradient-to-r from-[#b3631f] via-[#c7c366] to-[#f5f5f5] animate-gradient-x">
+          <div className="p-[2px] w-fit md:mx-0 rounded-full bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5] animate-gradient-x">
             <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#07041b]">
               <Image
                 width={30}

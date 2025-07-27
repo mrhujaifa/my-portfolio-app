@@ -12,7 +12,7 @@ const NavAnimation = () => {
           muted
           loop
           playsInline
-          className="absolute  lg:-top-115 -top-387 md:-top-146 w-3000 h-00 lg:w-full lg:h-full  -z-20 rotate-180"
+          className="rotate-180 absolute md:top-[-590px] lg:top-[-460px] top-[-430px] w-230 h-230   left-0 md:w-full md:h-full lg:w-full lg:h-full object-cover -z-20"
         >
           <source src="/video/navBgBlue.webm" type="video/webm" />
           Your browser does not support the video tag.

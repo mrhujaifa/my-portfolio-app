@@ -16,12 +16,18 @@ import {
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { Yesteryear } from "next/font/google";
+import { Outfit, Yesteryear } from "next/font/google";
 
 const yesteryear = Yesteryear({
   subsets: ["latin"],
   weight: "400", // Yesteryear only has normal weight
   variable: "--font-yesteryear", // optional, if you want to use CSS variable
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-outfit",
 });
 
 const navItems = [
@@ -63,8 +69,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50">
-        <div className="container mx-auto md:pl-10 md:py-5 lg:py-3 flex items-center justify-between bg-black/50 backdrop-blur-md rounded-full px-5 lg:px-0 py-1 shadow-lg">
+      <nav className={`fixed top-0 left-0 right-0 z-50 ${outfit.className} font-bold`}>
+        <div className="container mx-auto md:pl-10 md:py-5 lg:py-3 flex items-center justify-between bg-black/50 backdrop-blur-md md:rounded-full lg:rounded-full px-5 lg:px-0 py-1 shadow-lg">
           {/* Logo */}
           <div className="text-white  md:hidden lg:flex font-bold lg:text-2xl text-xl flex items-center gap-2">
             <Image
