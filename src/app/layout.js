@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import SpaceBackground from "./App/animation/animation";
+import Navbar from "./App/Components/Navbar/Navbar";
+import NavAnimation from "./App/NavAnimation/NavAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +23,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#301403]`}
       >
-        {children}
+        {/* 🎇 Background Fixed Space Animation */}
+        <div className="fixed inset-0 -z-10">
+          <SpaceBackground />
+        </div>
+        <div>
+          <Navbar></Navbar>
+        </div>
+        <NavAnimation></NavAnimation>
+        {/* 🌐 Main Page Content */}
+        <main className="relative z-10">{children}</main>
       </body>
     </html>
   );

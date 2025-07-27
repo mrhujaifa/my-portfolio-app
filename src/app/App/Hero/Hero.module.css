@@ -1,0 +1,64 @@
+.animatedGradientText {
+  background: linear-gradient(
+    270deg,
+    #ffd700,
+    /* solar gold */ #ff8c00,
+    /* deep orange */ #ff4500,
+    /* reddish-orange */ #ff6f61,
+    /* soft warm coral */ #ffb6c1,
+    /* light pink glow */ #b39ddb,
+    /* soft lilac (nebula vibe) */ #7c4dff,
+    /* rich space purple */ #00bcd4,
+    /* cosmic cyan-blue */ #ffd700 /* back to golden */
+  );
+
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: advancedGradientMove 25s ease-in-out infinite;
+
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.45); /* Slightly improved contrast */
+}
+
+@keyframes advancedGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradientBorder {
+  position: relative;
+  background-clip: padding-box; /* This makes the background stop at the padding box */
+  border: solid 2px transparent; /* Transparent border to hold the gradient */
+  /* Add transition for smooth glow effect */
+  transition: all 0.3s ease-in-out;
+  /* Initial shadow for the "lighting" effect */
+  box-shadow: 0 0 5px rgba(255, 167, 38, 0.5), 0 0 10px rgba(251, 140, 0, 0.3);
+}
+
+.gradientBorder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem; /* Match the button's rounded corners */
+  padding: 2px; /* Controls the thickness of the gradient border */
+  background: linear-gradient(to right, #ffa726, #fb8c00); /* Orange gradient */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none; /* Ensure the pseudo-element doesn't interfere with clicks */
+}
+
+/* Hover effect for an enhanced glow */
+.gradientBorder:hover {
+  box-shadow: 0 0 10px rgba(255, 167, 38, 0.8), 0 0 20px rgba(251, 140, 0, 0.6),
+    0 0 30px rgba(255, 167, 38, 0.4);
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
