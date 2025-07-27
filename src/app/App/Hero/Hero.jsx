@@ -4,10 +4,11 @@ import React from "react";
 import styles from "./Hero.module.css";
 import AutoTyping from "./TextTyping";
 import ProfileCard from "./InformationCard";
+import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="w-full px-4 md:px-8 md:mt-30  py-10 lg:mt-60 lg:px-0 mt-20">
+    <div className="w-full px-4 md:px-8 md:mt-30  py-10 lg:mt-60 lg:px-0 mt-30">
       <div className="flex flex-col md:flex-col lg:flex-row items-center  justify-between gap-10">
         {/* Left side */}
         <div className="w-ful md:text-left">
@@ -28,7 +29,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headings */}
-          <div className="mt-8 space-y-2">
+          <div className="mt-7 lg:mt-9">
             <h1 className="font-extrabold text-white text-[36px] sm:text-[48px] md:text-[60px] leading-tight">
               Hello
             </h1>
@@ -43,21 +44,32 @@ const Hero = () => {
           </div>
 
           {/* Typing effect */}
-          <div className="mt-4">
+          <div className="">
             <AutoTyping />
           </div>
 
           {/* Short Description */}
-          <div className="mt-6">
+          <div className=" lg:mt-6">
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-          I'm a <span className="text-[#5b77f2] font-semibold">MERN Stack Developer</span> who crafts
-          <span className="text-[#00b3e5] font-semibold"> scalable web apps</span> with clean code and intuitive UI.
-          Passionate about <span className="text-[#a268ff] font-semibold">React, Next.js</span> and solving real-world problems.
-        </p>
+              I'm a{" "}
+              <span className="text-[#5b77f2] font-semibold">
+                MERN Stack Developer
+              </span>{" "}
+              who crafts
+              <span className="text-[#00b3e5] font-semibold">
+                {" "}
+                scalable web apps
+              </span>{" "}
+              with clean code and intuitive UI. Passionate about{" "}
+              <span className="text-[#a268ff] font-semibold">
+                React, Next.js
+              </span>{" "}
+              and solving real-world problems.
+            </p>
           </div>
 
           {/* Buttons */}
-          <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="mt-10 lg:mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
             {/* Learn More Button */}
             <button
               className={`relative w-full sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
@@ -71,11 +83,13 @@ const Hero = () => {
 
             {/* Resume Button */}
             <button
-              className="w-full sm:w-auto px-6 py-3 sm:py-4 text-white font-semibold rounded-2xl 
-    bg-[#5b77f2]/90 backdrop-blur-md shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
-    focus:outline-none focus:ring-4 focus:ring-[#8567f9] focus:ring-opacity-50"
+              className={`relative w-full sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
+    bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5]
+    shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
+    focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`}
             >
-              Resume
+              <span className="relative z-10">Hire me</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5] blur opacity-50 rounded-2xl"></span>
             </button>
           </div>
         </div>
