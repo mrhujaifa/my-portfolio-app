@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SpaceBackground from "./App/animation/animation";
-import Navbar from "./App/Components/Navbar/Navbar";
-import NavAnimation from "./App/NavAnimation/NavAnimation";
+import SpaceBackground from "./{My-app}/animation/animation";
+import Navbar from "./{My-app}/Navbar/Navbar";
+import NavAnimation from "./{My-app}/NavAnimation/NavAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,8 +32,10 @@ export default function RootLayout({ children }) {
         <div>
           <Navbar></Navbar>
         </div>
-        <NavAnimation></NavAnimation>
-        {/* 🌐 Main Page Content */}
+        <div>
+          <NavAnimation></NavAnimation>
+        </div>
+
         <main className="relative z-10">{children}</main>
       </body>
     </html>

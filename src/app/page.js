@@ -1,10 +1,14 @@
-import Image from "next/image";
-import Navbar from "./App/Components/Navbar/Navbar";
-import NavAnimation from "./App/NavAnimation/NavAnimation";
-import Hero from "./App/Hero/Hero";
+import React from "react";
+import Hero from "./{My-app}/Hero/Hero";
 
-export default function Home() {
+const page = () => {
   return (
-    <div></div>
+    <div>
+      <div className="container mx-auto">
+        <Hero></Hero>
+      </div>
+    </div>
   );
-}
+};
+
+export default page;
