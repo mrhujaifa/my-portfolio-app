@@ -1,31 +1,81 @@
-import React from "react";
-import { TypeAnimation } from "react-type-animation";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const AutoTyping = () => {
+const texts = [
+  "Hi, I'm Hujaifa.",
+  "Full-Stack Developer specialized in MERN.",
+  "Creating efficient & scalable web solutions.",
+  "Passionate about clean code and UX.",
+  "Let’s build your next web application!",
+];
+
+
+const AutoTypingWithDots = () => {
+  const [textIndex, setTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+  const [dotCount, setDotCount] = useState(1);
+
+  // Typing animation
+  useEffect(() => {
+    const currentText = texts[textIndex];
+    if (charIndex < currentText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + currentText.charAt(charIndex));
+        setCharIndex((prev) => prev + 1);
+      }, 80);
+      return () => clearTimeout(timeout);
+    } else {
+      const pause = setTimeout(() => {
+        setIsAnimatingOut(true);
+      }, 1500);
+      return () => clearTimeout(pause);
+    }
+  }, [charIndex, textIndex]);
+
+  // Zoom-out after full sentence
+  useEffect(() => {
+    if (isAnimatingOut) {
+      const next = setTimeout(() => {
+        setDisplayedText("");
+        setCharIndex(0);
+        setTextIndex((prev) => (prev + 1) % texts.length);
+        setIsAnimatingOut(false);
+      }, 600);
+      return () => clearTimeout(next);
+    }
+  }, [isAnimatingOut]);
+
+  // ChatGPT-style dot animation: . .. ... cycling
+  useEffect(() => {
+    const dotTimer = setInterval(() => {
+      setDotCount((prev) => (prev % 3) + 1);
+    }, 500); // every 0.5s dot updates
+    return () => clearInterval(dotTimer);
+  }, []);
+
+  const dots = ".".repeat(dotCount);
+
   return (
-    <div className="text-white text-3xl  ">
-      <TypeAnimation
-        sequence={[
-          "Hi, I'm Hujaifa.", // টাইপ করবে
-          1500,                // ১.৫ সেকেন্ড রুকবে
-          "I'm a Full-Stack Developer.", 
-          2000,
-          "I love React & Next.js.",
-          2000,
-          "Let's build something amazing!",
-          2500,
-          () => {
-            console.log("Typing animation finished.");
-          },
-        ]}
-        speed={50}         // টাইপ করার গতি (মিলিসেকেন্ড)
-        deletionSpeed={30} // ডিলিট করার গতি
-        repeat={Infinity}  // লুপ হবে অনন্তকাল
-        cursor={true}      // কারসর দেখাবে
-        style={{ display: "inline-block" }}
-      />
+    <div className="relative h-20 flex items-center  text-3xl sm:text-4xl font-semibold text-white overflow-hidden">
+      <AnimatePresence mode="wait">
+        {!isAnimatingOut && (
+          <motion.div
+            key={textIndex}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.2 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center"
+          >
+            <span>{displayedText}</span>
+            <span className="ml-2 text-green-400">{dots}</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
-export default AutoTyping;
+export default AutoTypingWithDots;

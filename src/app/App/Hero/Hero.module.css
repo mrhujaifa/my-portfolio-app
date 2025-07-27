@@ -1,24 +1,18 @@
 .animatedGradientText {
   background: linear-gradient(
-    270deg,
-    #ffd700,
-    /* solar gold */ #ff8c00,
-    /* deep orange */ #ff4500,
-    /* reddish-orange */ #ff6f61,
-    /* soft warm coral */ #ffb6c1,
-    /* light pink glow */ #b39ddb,
-    /* soft lilac (nebula vibe) */ #7c4dff,
-    /* rich space purple */ #00bcd4,
-    /* cosmic cyan-blue */ #ffd700 /* back to golden */
+    90deg,
+    #a268ff,
+    #8567f9,
+    #5b77f2,
+    #3197ed,
+    #00b3e5
   );
-
-  background-size: 300% 300%;
+  background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 
-  animation: advancedGradientMove 25s ease-in-out infinite;
-
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.45); /* Slightly improved contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes advancedGradientMove {
@@ -32,6 +26,7 @@
     background-position: 0% 50%;
   }
 }
+
 
 .gradientBorder {
   position: relative;

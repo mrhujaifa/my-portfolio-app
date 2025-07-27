@@ -12,9 +12,9 @@ const NavAnimation = () => {
           muted
           loop
           playsInline
-          className="absolute lg:-top-120 -top-153 md:-top-111 w-full h-full -z-20 rotate-180"
+          className="absolute lg:-top-117 -top-153 md:-top-111 w-full h-full -z-20 rotate-180"
         >
-          <source src="/video/navbg.mp4" type="video/webm" />
+          <source src="/video/navBgBlue.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
         <div className="relative top-20 container mx-auto">

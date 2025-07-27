@@ -15,6 +15,14 @@ import {
 } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { Yesteryear } from "next/font/google";
+
+const yesteryear = Yesteryear({
+  subsets: ["latin"],
+  weight: "400", // Yesteryear only has normal weight
+  variable: "--font-yesteryear", // optional, if you want to use CSS variable
+});
 
 const navItems = [
   { name: "Home", icon: <FaHome />, path: "/" },
@@ -54,102 +62,142 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 ">
-      <div className="container mx-auto flex items-center justify-between bg-black/50 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 shadow-lg">
-        {/* Logo */}
-        <div className="text-white font-bold text-lg sm:text-xl flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
-          <span className="whitespace-nowrap">Hujaifa.dev</span>
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-50">
+        <div className="container mx-auto px-5 flex items-center justify-between bg-black/50 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 shadow-lg">
+          {/* Logo */}
+          <div className="text-white font-bold lg:text-2xl text-xl flex items-center gap-2">
+            <Image
+              src="/logos/My-logo.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="" // for other styles, but width/height props control size
+            />
+            <span
+              className={`${yesteryear.className} bg-gradient-to-r from-[#a268ff] via-[#8567f9] via-[#5b77f2] via-[#3197ed] to-[#00b3e5] bg-clip-text text-transparent font-bold`}
+            >
+              Mr. Hujaifa
+            </span>
+          </div>
+
+          {/* Center Nav Items */}
+          <ul className="hidden md:flex items-center space-x-4 lg:space-x-6 text-white">
+            {navItems.map((item, idx) => (
+              <li key={idx}>
+                <a
+                  href={item.path}
+                  className={`relative flex items-center gap-2 px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    isActive(item.path)
+                      ? "bg-gradient-to-r from-[#a268ff] via-[#8567f9] via-[#5b77f2] via-[#3197ed] to-[#00b3e5] text-white shadow-md animate-gradient-move"
+                      : "hover:bg-gradient-to-r hover:from-[#a268ff] hover:via-[#8567f9] hover:via-[#5b77f2] hover:via-[#3197ed] hover:to-[#00b3e5] hover:text-white"
+                  }`}
+                >
+                  {item.icon}
+                  <span className="hidden sm:inline">{item.name}</span>
+                  {isActive(item.path) && (
+                    <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-[#00b3e5] rounded-full"></span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Right Side */}
+          <div className="hidden md:flex items-center gap-3 lg:gap-4 text-white">
+            <a
+              href="/resume.pdf"
+              download
+              className="flex items-center gap-2 px-5 py-2  border border-purple-600 text-white rounded-lg text-sm font-semibold shadow-lg hover:scale-110 hover:shadow-xl transition-transform duration-300"
+              aria-label="Download Resume"
+            >
+              <FaDownload />
+              <span className="hidden sm:inline">Resume</span>
+            </a>
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              className="hover:text-[#a268ff]"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://linkedin.com/in/your-id"
+              target="_blank"
+              className="hover:text-[#a268ff]"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+            >
+              <FaLinkedin size={20} />
+            </a>
+          </div>
+
+          {/* Mobile Hamburger */}
+          <div className="md:hidden text-white">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
         </div>
 
-        {/* Center Nav Items */}
-        <ul className="hidden md:flex items-center space-x-4 lg:space-x-6 text-white">
-          {navItems.map((item, idx) => (
-            <li key={idx}>
+        {/* Mobile Dropdown */}
+        {menuOpen && (
+          <div className="md:hidden mt-2 bg-black/70 backdrop-blur-md rounded-xl py-4 px-4 text-white shadow-xl space-y-2 animate-fade-in-down">
+            {navItems.map((item, idx) => (
               <a
+                key={idx}
                 href={item.path}
-                className={`relative flex items-center gap-2 px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                onClick={() => setMenuOpen(false)}
+                className={`relative block px-4 py-2 rounded-md transition-all ${
                   isActive(item.path)
-                    ? "bg-gradient-to-r from-orange-400 to-yellow-300 text-black shadow-md"
-                    : "hover:bg-[#1E293B]/80"
+                    ? "bg-gradient-to-r from-[#a268ff] via-[#8567f9] via-[#5b77f2] via-[#3197ed] to-[#00b3e5] text-white animate-gradient-move"
+                    : "hover:bg-gradient-to-r hover:from-[#a268ff] hover:via-[#8567f9] hover:via-[#5b77f2] hover:via-[#3197ed] hover:to-[#00b3e5] hover:text-white"
                 }`}
               >
-                {item.icon}
-                <span className="hidden sm:inline">{item.name}</span>
+                <div className="flex items-center gap-2">
+                  {item.icon} {item.name}
+                </div>
                 {isActive(item.path) && (
-                  <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-yellow-300 rounded-full"></span>
+                  <span className="absolute bottom-1 left-5 w-1.5 h-1.5 bg-[#00b3e5] rounded-full"></span>
                 )}
               </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Right Side */}
-        <div className="hidden md:flex items-center gap-3 lg:gap-4 text-white">
-          <a
-            href="/resume.pdf"
-            download
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-400 to-yellow-300 text-black rounded-full text-sm font-medium hover:scale-105 transition"
-          >
-            <FaDownload />
-            <span className="hidden sm:inline">Resume</span>
-          </a>
-          <a
-            href="https://github.com/your-username"
-            target="_blank"
-            className="hover:text-orange-400"
-          >
-            <FaGithub size={18} />
-          </a>
-          <a
-            href="https://linkedin.com/in/your-id"
-            target="_blank"
-            className="hover:text-orange-400"
-          >
-            <FaLinkedin size={18} />
-          </a>
-        </div>
-
-        {/* Mobile Hamburger */}
-        <div className="md:hidden text-white">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Dropdown */}
-      {menuOpen && (
-        <div className="md:hidden mt-2 bg-black/70 backdrop-blur-md rounded-xl py-4 px-4 text-white shadow-xl space-y-2 animate-fade-in-down">
-          {navItems.map((item, idx) => (
+            ))}
             <a
-              key={idx}
-              href={item.path}
-              onClick={() => setMenuOpen(false)}
-              className={`relative block px-4 py-2 rounded-md transition-all ${
-                isActive(item.path)
-                  ? "bg-gradient-to-r from-orange-400 to-yellow-300 text-black"
-                  : "hover:bg-[#1E293B]/80"
-              }`}
+              href="/resume.pdf"
+              download
+              className="flex items-center gap-2 px-4 py-2  border border-purple-600 text-white rounded-md shadow-md hover:scale-105 transition-transform"
             >
-              <div className="flex items-center gap-2">
-                {item.icon} {item.name}
-              </div>
-              {isActive(item.path) && (
-                <span className="absolute bottom-1 left-5 w-1.5 h-1.5 bg-yellow-300 rounded-full"></span>
-              )}
+              <FaDownload />
+              Resume
             </a>
-          ))}
-          <a
-            href="/resume.pdf"
-            download
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-400 to-yellow-300 text-black rounded-md"
-          >
-            <FaDownload />
-            Resume
-          </a>
-        </div>
-      )}
-    </nav>
+          </div>
+        )}
+      </nav>
+
+      {/* Global keyframes for gradient animation */}
+      <style jsx global>{`
+        @keyframes gradient-move {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        .animate-gradient-move {
+          animation: gradient-move 4s ease infinite;
+          background-size: 200% 200%;
+        }
+      `}</style>
+    </>
   );
 }
