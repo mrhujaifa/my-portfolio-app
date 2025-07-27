@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="w-full px-4 md:px-8 md:mt-30  py-10 lg:mt-60 lg:px-0 mt-30">
+    <div className="w-full px-4 md:px-8 md:mt-30  py-10 lg:mt-80 lg:px-0 mt-50">
       <div className="flex flex-col md:flex-col lg:flex-row items-center  justify-between gap-10">
         {/* Left side */}
         <div className="w-ful md:text-left">

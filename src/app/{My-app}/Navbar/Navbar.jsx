@@ -27,7 +27,7 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700"] });
 const navItems = [
   { name: "Home", icon: <FaHome />, path: "/" },
   { name: "Skills", icon: <FaCode />, path: "/skills" },
-  { name: "Experience", icon: <FaBriefcase />, path: "#experience" },
+  { name: "Experience", icon: <FaBriefcase />, path: "/experience" },
   { name: "Education", icon: <FaGraduationCap />, path: "#education" },
   { name: "Projects", icon: <FaImage />, path: "#projects" },
   { name: "Contact", icon: <FaEnvelope />, path: "#contact" },
@@ -123,10 +123,10 @@ export default function Navbar() {
               <span className="hidden sm:inline">Resume</span>
             </a>
             <div className="md:hidden lg:flex gap-3">
-              <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="hover:text-[#a268ff]">
+              <a href="https://github.com/mrhujaifa" target="_blank" rel="noopener noreferrer" className="hover:text-[#a268ff]">
                 <FaGithub size={20} />
               </a>
-              <a href="https://linkedin.com/in/your-id" target="_blank" rel="noopener noreferrer" className="hover:text-[#a268ff]">
+              <a href="https://www.linkedin.com/in/mrhujaifa" target="_blank" rel="noopener noreferrer" className="hover:text-[#a268ff]">
                 <FaLinkedin size={20} />
               </a>
             </div>
