@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 
+/**
+ * Middleware to allow Googlebot and avoid interfering with sitemap.xml and robots.txt
+ */
 export function middleware(request) {
   const userAgent = request.headers.get('user-agent') || '';
 
@@ -8,8 +11,10 @@ export function middleware(request) {
     return NextResponse.next();
   }
 
-  // 🔐 Example block for other bots or conditions
-  // return new Response("Forbidden", { status: 403 });
-
   return NextResponse.next();
 }
+
+// ✅ Exclude sitemap.xml, robots.txt, favicon.ico, _next, static assets etc.
+export const config = {
+  matcher: ['/((?!sitemap\\.xml|robots\\.txt|favicon\\.ico|_next|static|images).*)'],
+};
