@@ -8,9 +8,6 @@ const page = () => {
       <div className="container mx-auto">
         <Hero></Hero>
       </div>
-      <footer>
-        <Footer></Footer>
-      </footer>
     </div>
   );
 };

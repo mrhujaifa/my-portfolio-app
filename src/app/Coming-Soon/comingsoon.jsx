@@ -45,33 +45,38 @@ export default function ComingSoon() {
         <div className="flex justify-center gap-6 text-white font-mono text-sm sm:text-lg">
           {Object.entries(timeLeft).map(([unit, value]) => (
             <div key={unit} className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold">{value ?? "0"}</div>
+              <div className="text-3xl sm:text-4xl font-bold">
+                {value ?? "0"}
+              </div>
               <div className="text-gray-400">{unit}</div>
             </div>
           ))}
         </div>
 
-        {/* Email subscription */}
-        <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-3 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 hover:opacity-90 transition-all font-semibold">
-            Notify Me
-          </button>
-        </div>
-
         {/* Socials */}
         <div className="mt-8 flex justify-center gap-5 text-2xl">
-          <a href="https://facebook.com/your-id" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+          <a
+            href="https://facebook.com/your-id"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500"
+          >
             <FaFacebook />
           </a>
-          <a href="https://github.com/your-id" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+          <a
+            href="https://github.com/your-id"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-300"
+          >
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/your-id" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
+          <a
+            href="https://linkedin.com/in/your-id"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-300"
+          >
             <FaLinkedin />
           </a>
         </div>
