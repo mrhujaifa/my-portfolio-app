@@ -3,6 +3,8 @@ import "./globals.css";
 import SpaceBackground from "./{My-app}/animation/animation";
 import Navbar from "./{My-app}/Navbar/Navbar";
 import NavAnimation from "./{My-app}/NavAnimation/NavAnimation";
+import CustomCursor from "./Components/CustomCursor";
+import UltraAdvancedSpaceCursor from "./Components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +72,7 @@ export default function RootLayout({ children }) {
         <div>
           <NavAnimation />
         </div>
+        <UltraAdvancedSpaceCursor></UltraAdvancedSpaceCursor>
 
         <main className="relative z-10">{children}</main>
       </body>
