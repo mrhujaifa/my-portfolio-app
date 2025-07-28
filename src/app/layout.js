@@ -40,7 +40,7 @@ export const metadata = {
     siteName: "Mr. Hujaifa Portfolio",
     images: [
       {
-        url: "https://mrhujaifa.vercel.app/og-thumbnail.jpg", // তুমি চাইলে একটা thumbnail বসাতে পারো
+        url: "https://mrhujaifa.vercel.app/og-thumbnail.jpg", 
         width: 1200,
         height: 630,
         alt: "Mr. Hujaifa Portfolio Thumbnail",
