@@ -1,20 +1,13 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-/**
- * Middleware to allow Googlebot and avoid interfering with sitemap.xml and robots.txt
- */
 export function middleware(request) {
-  const userAgent = request.headers.get('user-agent') || '';
-
-  // ✅ Allow Googlebot
-  if (userAgent.includes('Googlebot')) {
-    return NextResponse.next();
-  }
-
+  // এখানে কোনো block নেই, সব রিকোয়েস্ট চলবে
   return NextResponse.next();
 }
 
-// ✅ Exclude sitemap.xml, robots.txt, favicon.ico, _next, static assets etc.
 export const config = {
-  matcher: ['/((?!sitemap\\.xml|robots\\.txt|favicon\\.ico|_next|static|images).*)'],
+  matcher: [
+    // middleware চলবে সব path এ _next/static, robots.txt, sitemap.xml বাদ দিয়ে
+    '/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|api).*)',
+  ],
 };
