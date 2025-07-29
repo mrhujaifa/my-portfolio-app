@@ -5,6 +5,7 @@ import Navbar from "./{My-app}/Navbar/Navbar";
 import NavAnimation from "./{My-app}/NavAnimation/NavAnimation";
 import CustomCursor from "./Components/CustomCursor";
 import UltraAdvancedSpaceCursor from "./Components/CustomCursor";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -45,6 +46,8 @@ export const metadata = {
     "web developer Md. Hujaifa Islam Shanto ",
     "Software Engineer",
     "Developer Hujaifa",
+    "mdhujaifaislamshanto",
+    "md hujaifa islam shanto",
   ],
   authors: [
     { name: "Md. Hujaifa Islam Shanto", url: "https://mrhujaifa.vercel.app" },
@@ -58,6 +61,11 @@ export const metadata = {
     "max-snippet": -1,
     "max-image-preview": "large",
     "max-video-preview": -1,
+  },
+
+  // ➕ ADDED: let Google reliably pick your favicon (ICO)
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
   },
 
   openGraph: {
@@ -134,8 +142,24 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href="https://mrhujaifa.vercel.app/" />
+
+        <meta
+          name="description"
+          content="Official portfolio of Md. Hujaifa Islam Shanto, a professional MERN Stack Developer from Bangladesh."
+        />
+        <meta
+          name="keywords"
+          content="Md. Hujaifa Islam, MERN Stack Developer, React Developer, Node.js Developer, Portfolio, Bangladesh Developer"
+        />
+        <meta name="author" content="Md. Hujaifa Islam Shanto" />
+        <meta name="robots" content="index, follow, noarchive" />
+        <meta
+          name="google-site-verification"
+          content="3KUtrcoFYFof8Do-qtJVSQEfX0E41BmaEmxQ-3Uf3Ro"
+        />
 
         <script
           type="application/ld+json"
