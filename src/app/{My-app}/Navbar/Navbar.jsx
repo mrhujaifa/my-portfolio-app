@@ -62,12 +62,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 ${outfit.className} font-bold`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 ${outfit.className} font-bold`}
+      >
         <div className="container mx-auto md:pl-10 md:py-5 lg:py-3 flex items-center justify-between bg-black/50 backdrop-blur-md md:rounded-full lg:rounded-full px-5 lg:px-0 py-1 shadow-lg">
           {/* Logo */}
           <div className="text-white md:hidden lg:flex font-bold lg:text-2xl text-xl flex items-center gap-2">
             <Image src="/logos/My-logo.png" alt="Logo" width={40} height={40} />
-            <span className={`${yesteryear.className} bg-gradient-to-r from-[#a268ff] via-[#8567f9] via-[#5b77f2] via-[#3197ed] to-[#00b3e5] bg-clip-text text-transparent font-bold`}>
+            <span
+              className={`${yesteryear.className} bg-gradient-to-r from-[#a268ff] via-[#8567f9] via-[#5b77f2] via-[#3197ed] to-[#00b3e5] bg-clip-text text-transparent font-bold`}
+            >
               Mr. Hujaifa
             </span>
           </div>
@@ -123,10 +127,20 @@ export default function Navbar() {
               <span className="hidden sm:inline">Resume</span>
             </a>
             <div className="md:hidden lg:flex gap-3">
-              <a href="https://github.com/mrhujaifa" target="_blank" rel="noopener noreferrer" className="hover:text-[#a268ff]">
+              <a
+                href="https://github.com/mrhujaifa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#a268ff]"
+              >
                 <FaGithub size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/mrhujaifa" target="_blank" rel="noopener noreferrer" className="hover:text-[#a268ff]">
+              <a
+                href="https://www.linkedin.com/in/mrhujaifa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#a268ff]"
+              >
                 <FaLinkedin size={20} />
               </a>
             </div>
@@ -134,7 +148,10 @@ export default function Navbar() {
 
           {/* Mobile Hamburger */}
           <div className="md:hidden text-white">
-            <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
               {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>

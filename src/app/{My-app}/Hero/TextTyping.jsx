@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -8,7 +10,6 @@ const texts = [
   "Passionate about clean code and UX.",
   "Let’s build your next web application!",
 ];
-
 
 const AutoTypingWithDots = () => {
   const [textIndex, setTextIndex] = useState(0);

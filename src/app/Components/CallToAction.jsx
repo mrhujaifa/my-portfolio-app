@@ -13,7 +13,6 @@ const lobster = Lobster({
   variable: "--font-lobster",
 });
 
-
 export default function CallToAction() {
   return (
     <section className="py-24 px-6">
@@ -49,7 +48,12 @@ export default function CallToAction() {
           className="flex flex-col items-center justify-center gap-4"
         >
           <div className="text-4xl md:text-5xl ">
-            <Image src="/images/contact-us.png" width={90} height={90} />
+            <Image
+              alt="md hujaifa islam | contact us"
+              src="/images/contact-us.png"
+              width={90}
+              height={90}
+            />
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-snug tracking-tight">
             Ready to Collaborate? <br className="hidden md:block" />

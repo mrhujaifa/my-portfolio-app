@@ -25,7 +25,6 @@ export const StarBackground = (props) => {
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} stride={3} positions={sphere} frustumCulled {...props}>
         <PointMaterial
-          
           color="#fff"
           size={0.002}
           sizeAttenuation

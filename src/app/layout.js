@@ -5,7 +5,6 @@ import Navbar from "./{My-app}/Navbar/Navbar";
 import NavAnimation from "./{My-app}/NavAnimation/NavAnimation";
 import CustomCursor from "./Components/CustomCursor";
 import UltraAdvancedSpaceCursor from "./Components/CustomCursor";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

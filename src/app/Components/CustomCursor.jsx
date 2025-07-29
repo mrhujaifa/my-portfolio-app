@@ -31,16 +31,21 @@ export default function FuturisticSpaceCursor() {
 
       if (cursorRef.current && glowRef.current && pulseRef.current) {
         // Main circle
-        cursorRef.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0) translate(-50%, -50%) scale(${click ? 0.85 : 1})`;
+        cursorRef.current.style.transform = `translate3d(${pos.current.x}px, ${
+          pos.current.y
+        }px, 0) translate(-50%, -50%) scale(${click ? 0.85 : 1})`;
 
         // Glow behind main circle, smooth scale and opacity pulsing
-        glowRef.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0) translate(-50%, -50%) scale(${click ? 1.3 : 1})`;
+        glowRef.current.style.transform = `translate3d(${pos.current.x}px, ${
+          pos.current.y
+        }px, 0) translate(-50%, -50%) scale(${click ? 1.3 : 1})`;
         glowRef.current.style.opacity = click ? "0.6" : "0.35";
 
         // Outer pulse ring animation
         const pulseScale = 1 + 0.15 * Math.sin(Date.now() / 400);
         pulseRef.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0) translate(-50%, -50%) scale(${pulseScale})`;
-        pulseRef.current.style.opacity = 0.15 + 0.15 * Math.cos(Date.now() / 400);
+        pulseRef.current.style.opacity =
+          0.15 + 0.15 * Math.cos(Date.now() / 400);
       }
 
       animationFrameId = requestAnimationFrame(animate);
@@ -77,9 +82,7 @@ export default function FuturisticSpaceCursor() {
           height: 14px;
           background: linear-gradient(135deg, #8a2be2, #4b0082);
           border-radius: 50%;
-          box-shadow:
-            0 0 6px 2px #8a2be2,
-            0 0 10px 4px #6a0dad;
+          box-shadow: 0 0 6px 2px #8a2be2, 0 0 10px 4px #6a0dad;
           pointer-events: none;
           z-index: 9999;
           will-change: transform, box-shadow;
