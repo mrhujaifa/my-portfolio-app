@@ -16,6 +16,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata = {
   title:
     "Md. Hujaifa Islam Shanto — Expert MERN Stack Developer | Full-Stack Portfolio | Mr. Hujaifa",
@@ -144,12 +150,14 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="canonical" href="https://mrhujaifa.vercel.app/" />
 
         <meta
           name="description"
           content="Official portfolio of Md. Hujaifa Islam Shanto, a professional MERN Stack Developer from Bangladesh."
         />
+
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://mrhujaifa.vercel.app/" />
         <meta
           name="keywords"
           content="Md. Hujaifa Islam, MERN Stack Developer, React Developer, Node.js Developer, Portfolio, Bangladesh Developer"
@@ -224,6 +232,21 @@ export default function RootLayout({ children }) {
         <NavAnimation />
         <UltraAdvancedSpaceCursor />
         <CustomCursor></CustomCursor>
+        <noscript>
+          <div
+            style={{ padding: "12px", background: "#0b0b0b", color: "#fff" }}
+          >
+            <h1 style={{ margin: 0 }}>
+              Md. Hujaifa Islam Shanto — MERN Stack Developer (React, Next.js,
+              Node, Express, MongoDB)
+            </h1>
+            <p style={{ margin: "8px 0 0" }}>
+              Bangladesh-ভিত্তিক Full‑Stack ডেভেলপার। Projects, Skills,
+              Experience ও যোগাযোগ দেখুন।
+            </p>
+          </div>
+        </noscript>
+
         <main className="relative z-10">{children}</main>
       </body>
     </html>
