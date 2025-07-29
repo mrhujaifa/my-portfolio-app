@@ -20,7 +20,7 @@ const lobster = Lobster({
 
 export default function About() {
   return (
-    <div className="mt-20">
+    <div className=" lg:mt-20">
       <div className="container mx-auto flex gap-2 my-3 px-4 lg:px-0 lg:justify-center items-center">
         <Image
               src="/images/about (1).png"
