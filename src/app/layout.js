@@ -17,28 +17,34 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title:
-    "Md. Hujaifa Islam Shanto — MERN Stack Developer | Portfolio of Mr. Hujaifa",
+    "Md. Hujaifa Islam Shanto — Expert MERN Stack Developer | Full-Stack Portfolio | Mr. Hujaifa",
   description:
-    "Welcome to the official portfolio of Md. Hujaifa Islam Shanto, also known as Mr. Hujaifa — a professional MERN Stack Developer from Bangladesh. Specialized in React.js, Node.js, Express.js, and MongoDB. Discover full-stack projects, developer skills, and more.",
+    "Official portfolio of Md. Hujaifa Islam Shanto (Mr. Hujaifa), a professional MERN Stack Developer from Bangladesh. Explore advanced React.js, Node.js, Express.js, MongoDB projects, blog, and contact info.",
   keywords: [
     "Md. Hujaifa Islam",
     "Md. Hujaifa Islam Shanto",
     "Mr. Hujaifa",
-    "Developer Hujaifa",
-    "Web Developer Md. Hujaifa Islam Shanto",
-    "MERN Stack Developer",
-    "MERN Stack Developer Hujaifa",
-    "MERN Stack Developer Md. Hujaifa Islam Shanto",
-    "Full Stack Developer Bangladesh",
-    "React Developer Bangladesh",
+    "MERN Stack Developer Bangladesh",
+    "Full-Stack Developer Bangladesh",
+    "React Developer",
     "Next.js Developer",
-    "JavaScript Developer",
+    "Node.js Developer",
+    "Express.js Developer",
+    "MongoDB Developer",
+    "Software Engineer Bangladesh",
+    "Portfolio Md. Hujaifa Islam",
+    "Web Developer Bangladesh",
     "Frontend Developer",
     "Backend Developer",
+    "Mr. Hujaifa",
+    "web developement",
+    "web developer Mr. hujaifa",
+    "web developer Md. Hujaifa Islam",
+    "web developer md hujaifa islam",
+    "web developer md hujaifa islam shanto ",
+    "web developer Md. Hujaifa Islam Shanto ",
     "Software Engineer",
-    "Full-Stack Developer Hujaifa",
-    "Developer Mr. Hujaifa",
-    "Portfolio of Md. Hujaifa Islam",
+    "Developer Hujaifa",
   ],
   authors: [
     { name: "Md. Hujaifa Islam Shanto", url: "https://mrhujaifa.vercel.app" },
@@ -56,9 +62,9 @@ export const metadata = {
 
   openGraph: {
     title:
-      "Md. Hujaifa Islam Shanto — MERN Stack Developer | Mr. Hujaifa Portfolio",
+      "Md. Hujaifa Islam Shanto — MERN Stack Developer | Professional Portfolio",
     description:
-      "Explore the professional full-stack portfolio of Md. Hujaifa Islam Shanto aka Mr. Hujaifa — MERN Stack Developer from Bangladesh. Projects in React, Node, Express, MongoDB & Next.js.",
+      "Explore the professional portfolio of Md. Hujaifa Islam Shanto, a MERN Stack Developer specializing in React, Node, Express, MongoDB, and Next.js.",
     url: "https://mrhujaifa.vercel.app",
     siteName: "Mr. Hujaifa Portfolio",
     images: [
@@ -66,7 +72,7 @@ export const metadata = {
         url: "https://mrhujaifa.vercel.app/images/about-img.png",
         width: 1200,
         height: 630,
-        alt: "Md. Hujaifa Islam Shanto | MERN Stack Developer Portfolio",
+        alt: "Md. Hujaifa Islam Shanto - MERN Stack Developer Portfolio",
         type: "image/png",
       },
     ],
@@ -76,9 +82,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Md. Hujaifa Islam Shanto — MERN Stack Developer | Mr. Hujaifa",
+    title: "Md. Hujaifa Islam Shanto — MERN Stack Developer | Portfolio",
     description:
-      "Official portfolio of MERN Stack Developer Md. Hujaifa Islam Shanto (Mr. Hujaifa) — showcasing full-stack web projects and development skills.",
+      "Portfolio website of MERN Stack Developer Md. Hujaifa Islam Shanto (Mr. Hujaifa). Check out projects, skills, and contact information.",
     site: "@mr___hujaifa",
     creator: "@mr___hujaifa",
     images: ["https://mrhujaifa.vercel.app/images/about-img.png"],
@@ -86,6 +92,40 @@ export const metadata = {
 
   verification: {
     google: "3KUtrcoFYFof8Do-qtJVSQEfX0E41BmaEmxQ-3Uf3Ro",
+  },
+
+  // Additional structured data for SEO (JSON-LD)
+  additionalMetaTags: [
+    {
+      name: "google-site-verification",
+      content: "3KUtrcoFYFof8Do-qtJVSQEfX0E41BmaEmxQ-3Uf3Ro",
+    },
+  ],
+
+  // Adding JSON-LD structured data for Person schema
+  metadataBase: new URL("https://mrhujaifa.vercel.app"),
+  alternates: {
+    canonical: "https://mrhujaifa.vercel.app",
+  },
+
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Md. Hujaifa Islam Shanto",
+    url: "https://mrhujaifa.vercel.app",
+    sameAs: [
+      "https://www.linkedin.com/in/mrhujaifa",
+      "https://github.com/mrhujaifa",
+      "https://twitter.com/mr___hujaifa",
+    ],
+    jobTitle: "MERN Stack Developer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Self-employed",
+    },
+    image: "https://mrhujaifa.vercel.app/images/about-img.png",
+    description:
+      "Professional MERN Stack Developer specializing in React, Node.js, Express.js, MongoDB and Next.js.",
   },
 };
 
