@@ -95,20 +95,55 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-        {/* Schema.org JSON-LD */}
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="canonical" href="https://mrhujaifa.vercel.app/" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Md. Hujaifa Islam Shanto",
-              url: "https://mrhujaifa.vercel.app",
-              sameAs: [
-                "https://www.linkedin.com/in/mrhujaifa",
-                "https://github.com/mrhujaifa",
-                "https://www.facebook.com/mrhujaifa0",
-                "https://x.com/mr___hujaifa",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://mrhujaifa.vercel.app/#person",
+                  name: "Md. Hujaifa Islam Shanto",
+                  url: "https://mrhujaifa.vercel.app",
+                  image: "https://mrhujaifa.vercel.app/images/about-img.png",
+                  jobTitle: "MERN Stack Developer",
+                  sameAs: [
+                    "https://www.linkedin.com/in/mrhujaifa",
+                    "https://github.com/mrhujaifa",
+                    "https://facebook.com/mrhujaifa0",
+                    "https://x.com/mr___hujaifa",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://mrhujaifa.vercel.app/#website",
+                  url: "https://mrhujaifa.vercel.app",
+                  name: "Md. Hujaifa Islam Shanto — Portfolio",
+                  description:
+                    "Portfolio of Md. Hujaifa Islam Shanto — MERN Stack Developer from Bangladesh",
+                  publisher: {
+                    "@id": "https://mrhujaifa.vercel.app/#person",
+                  },
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://mrhujaifa.vercel.app/#organization",
+                  name: "Md. Hujaifa Islam Shanto",
+                  url: "https://mrhujaifa.vercel.app",
+                  logo: {
+                    "@type": "ImageObject",
+                    url: "https://mrhujaifa.vercel.app/favicon-512.png",
+                  },
+                  sameAs: [
+                    "https://www.linkedin.com/in/mrhujaifa",
+                    "https://github.com/mrhujaifa",
+                    "https://facebook.com/mrhujaifa0",
+                  ],
+                },
               ],
             }),
           }}
