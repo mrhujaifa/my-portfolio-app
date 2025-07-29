@@ -17,25 +17,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mr. Hujaifa — MERN Stack Developer | Full-Stack Web Applications",
+  title:
+    "Md. Hujaifa Islam Shanto — MERN Stack Developer | Portfolio of Mr. Hujaifa",
   description:
-    "Discover the professional portfolio of Md. Hujaifa Islam Shanto, a passionate MERN Stack Developer from Bangladesh specializing in React, Node.js, Express, and MongoDB. Building scalable and modern web applications.",
+    "Welcome to the official portfolio of Md. Hujaifa Islam Shanto, also known as Mr. Hujaifa — a professional MERN Stack Developer from Bangladesh. Specialized in React.js, Node.js, Express.js, and MongoDB. Discover full-stack projects, developer skills, and more.",
   keywords: [
+    "Md. Hujaifa Islam",
     "Md. Hujaifa Islam Shanto",
+    "Mr. Hujaifa",
+    "Developer Hujaifa",
+    "Web Developer Md. Hujaifa Islam Shanto",
     "MERN Stack Developer",
+    "MERN Stack Developer Hujaifa",
+    "MERN Stack Developer Md. Hujaifa Islam Shanto",
     "Full Stack Developer Bangladesh",
-    "React Developer",
-    "Node.js Developer",
-    "MongoDB Expert",
+    "React Developer Bangladesh",
     "Next.js Developer",
-    "Web Application Developer",
-    "Portfolio of Hujaifa",
-    "Bangladesh Web Developer",
     "JavaScript Developer",
-    "Express.js Developer",
     "Frontend Developer",
     "Backend Developer",
     "Software Engineer",
+    "Full-Stack Developer Hujaifa",
+    "Developer Mr. Hujaifa",
+    "Portfolio of Md. Hujaifa Islam",
   ],
   authors: [
     { name: "Md. Hujaifa Islam Shanto", url: "https://mrhujaifa.vercel.app" },
@@ -46,13 +50,16 @@ export const metadata = {
     index: true,
     follow: true,
     nocache: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
   },
 
-  
   openGraph: {
-    title: "Mr. Hujaifa — MERN Stack Developer | Professional Portfolio",
+    title:
+      "Md. Hujaifa Islam Shanto — MERN Stack Developer | Mr. Hujaifa Portfolio",
     description:
-      "Explore the portfolio and projects of Md. Hujaifa Islam Shanto, a dedicated MERN Stack Developer from Bangladesh specializing in modern web technologies.",
+      "Explore the professional full-stack portfolio of Md. Hujaifa Islam Shanto aka Mr. Hujaifa — MERN Stack Developer from Bangladesh. Projects in React, Node, Express, MongoDB & Next.js.",
     url: "https://mrhujaifa.vercel.app",
     siteName: "Mr. Hujaifa Portfolio",
     images: [
@@ -60,23 +67,24 @@ export const metadata = {
         url: "https://mrhujaifa.vercel.app/images/about-img.png",
         width: 1200,
         height: 630,
-        alt: "Portfolio thumbnail of Mr. Hujaifa",
-        type: "image/png", 
+        alt: "Md. Hujaifa Islam Shanto | MERN Stack Developer Portfolio",
+        type: "image/png",
       },
     ],
-
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Mr. Hujaifa — MERN Stack Developer | Portfolio",
+    title: "Md. Hujaifa Islam Shanto — MERN Stack Developer | Mr. Hujaifa",
     description:
-      "Professional portfolio of Md. Hujaifa Islam Shanto, MERN Stack Developer from Bangladesh.",
-    site: "mr___hujaifa",
-    creator: "mr___hujaifa",
-    images: ["https://mrhujaifa.vercel.app/og-thumbnail.jpg"],
+      "Official portfolio of MERN Stack Developer Md. Hujaifa Islam Shanto (Mr. Hujaifa) — showcasing full-stack web projects and development skills.",
+    site: "@mr___hujaifa",
+    creator: "@mr___hujaifa",
+    images: ["https://mrhujaifa.vercel.app/images/about-img.png"],
   },
+
   verification: {
     google: "3KUtrcoFYFof8Do-qtJVSQEfX0E41BmaEmxQ-3Uf3Ro",
   },
@@ -86,7 +94,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/images/about-img.png" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
