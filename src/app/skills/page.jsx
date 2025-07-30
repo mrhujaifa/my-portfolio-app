@@ -23,7 +23,7 @@ function Pill({ icon, label }) {
         "
       >
         {icon ? (
-          <Image src={icon} alt={label} width={16} height={16} className="" />
+          <Image src={icon} alt={label} width={17} height={17} className="" />
         ) : null}
       </span>
       {label}
@@ -179,12 +179,12 @@ export default function SkillsShowcase() {
       title: "Frontend Development",
       icon: "/skills/frontend.png",
       pills: [
-        { label: "HTML5", icon: "/skills/html5.png" },
-        { label: "CSS3", icon: "/skills/css3.png" },
+        { label: "HTML5", icon: "/skills/html.png" },
+        { label: "CSS3", icon: "/skills/css.png" },
         { label: "JavaScript", icon: "/skills/js.png" },
-        { label: "React", icon: "/skills/react.png" },
-        { label: "Next.js", icon: "/skills/next.png" },
-        { label: "React Router", icon: "/skills/react-router.png" },
+        { label: "React.js", icon: "/skills/react.png" },
+        { label: "Next.js", icon: "/skills/nextjs.webp" },
+        { label: "React Router", icon: "/skills/react-router.webp" },
         { label: "Tailwind CSS", icon: "/skills/tailwind.png" },
       ],
     },
@@ -197,6 +197,7 @@ export default function SkillsShowcase() {
         { label: "MongoDB", icon: "/skills/mongodb.png" },
         { label: "Stripe", icon: "/skills/Stripe.png" },
         { label: "Jwt", icon: "/skills/jwt.png" },
+        { label: "Axios", icon: "/skills/axios.png" },
       ],
     },
     {
@@ -213,9 +214,9 @@ export default function SkillsShowcase() {
       pills: [
         { label: "VS Code", icon: "/skills/vscode.png" },
         { label: "Firebase", icon: "/skills/firebase.png" },
-        { label: "Vercel", icon: "/skills/vercel.png" },
-        { label: "Vite", icon: "/skills/vite.png" },
-        { label: "Netlify", icon: "/skills/netlify.png" },
+        { label: "Vercel", icon: "/skills/vercel.svg" },
+        { label: "Vite", icon: "/skills/vite.png"},
+        { label: "Netlify", icon: "/skills/netlify.svg" },
       ],
     },
     {
@@ -227,7 +228,7 @@ export default function SkillsShowcase() {
       title: "Creative Skills",
       icon: "/skills/creative.png",
       pills: [
-        { label: "UI Animation", icon: "/skills/uianimation.png" },
+        { label: "UI Animation", icon: "/skills/animate.png" },
         { label: "Motion Animation", icon: "/skills/motion.png" },
       ],
     },
