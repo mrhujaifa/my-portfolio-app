@@ -234,24 +234,26 @@ export default function SkillsShowcase() {
   ];
 
   return (
-    <div className="mt-70">
+    <div>
       <SkillSectionTitle></SkillSectionTitle>
-      <section className="relative isolate">
-        {/* ambient glow background */}
-        <div
-          aria-hidden
-          className="
+      <div className="mt-100">
+        <section className="relative isolate">
+          {/* ambient glow background */}
+          <div
+            aria-hidden
+            className="
           pointer-events-none absolute inset-0 -z-10
         "
-        />
-        <div className="mx-auto container px-4 py-14 sm:px-6 lg:px-0">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {sections.map((s) => (
-              <SectionCard key={s.title} {...s} />
-            ))}
+          />
+          <div className="mx-auto container px-4 py-14 sm:px-6 lg:px-0">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {sections.map((s) => (
+                <SectionCard key={s.title} {...s} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
