@@ -24,7 +24,7 @@ export const viewport = {
 
 export const metadata = {
   title:
-    "Md. Hujaifa Islam Shanto — MERN Stack Developer | Full-Stack Portfolio | Mr. Hujaifa",
+    "Md. Hujaifa Islam Shanto — MERN Stack Developer | Mr. Hujaifa",
   description:
     "Official portfolio of Md. Hujaifa Islam Shanto (Mr. Hujaifa), a professional MERN Stack Developer from Bangladesh. Explore advanced React.js, Node.js, Express.js, MongoDB projects, blog, and contact info.",
   keywords: [
