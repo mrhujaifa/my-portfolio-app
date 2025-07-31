@@ -5,6 +5,7 @@ import styles from "./Hero.module.css";
 import AutoTyping from "./TextTyping";
 import ProfileCard from "./InformationCard";
 import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -77,7 +78,7 @@ const Hero = () => {
     shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
     focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`}
             >
-              <span className="relative z-10">Learn More</span>
+              <Link href={'/skills'} className="relative z-10">Learn More</Link>
               <span className="absolute inset-0 bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5] blur opacity-50 rounded-2xl"></span>
             </button>
 
@@ -88,7 +89,7 @@ const Hero = () => {
     shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
     focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`}
             >
-              <span className="relative z-10">Hire me</span>
+              <Link href="/contact" className="relative z-10">Hire me</Link>
               <span className="absolute inset-0 bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5] blur opacity-50 rounded-2xl"></span>
             </button>
           </div>

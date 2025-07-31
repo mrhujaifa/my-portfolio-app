@@ -13,6 +13,8 @@ import {
   FaLinkedin,
   FaDownload,
 } from "react-icons/fa";
+import { RiBloggerLine } from "react-icons/ri";
+
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -27,9 +29,10 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700"] });
 const navItems = [
   { name: "Home", icon: <FaHome />, path: "/" },
   { name: "Skills", icon: <FaCode />, path: "/skills" },
-  { name: "Education", icon: <FaGraduationCap />, path: "#education" },
   { name: "Projects", icon: <FaImage />, path: "/projects" },
   { name: "Contact", icon: <FaEnvelope />, path: "/contact" },
+  { name: "Blogs", icon: <RiBloggerLine size={20} />, path: "/blogs" },
+
 ];
 
 export default function Navbar() {
@@ -195,7 +198,7 @@ export default function Navbar() {
             <a
               href="/resume.pdf"
               download
-              className="flex items-center gap-2 px-4 py-2 border border-purple-600 text-white rounded-md shadow-md hover:scale-105 transition-transform"
+              className="flex w-30 md:w-full lg:w-full items-center gap-2 px-4 py-2 border border-purple-600 text-white rounded-md shadow-md hover:scale-105 transition-transform"
             >
               <FaDownload /> Resume
             </a>
