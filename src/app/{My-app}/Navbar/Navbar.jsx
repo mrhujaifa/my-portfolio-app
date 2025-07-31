@@ -27,10 +27,9 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700"] });
 const navItems = [
   { name: "Home", icon: <FaHome />, path: "/" },
   { name: "Skills", icon: <FaCode />, path: "/skills" },
-  { name: "Experience", icon: <FaBriefcase />, path: "/experience" },
   { name: "Education", icon: <FaGraduationCap />, path: "#education" },
-  { name: "Projects", icon: <FaImage />, path: "#projects" },
-  { name: "Contact", icon: <FaEnvelope />, path: "#contact" },
+  { name: "Projects", icon: <FaImage />, path: "/projects" },
+  { name: "Contact", icon: <FaEnvelope />, path: "/contact" },
 ];
 
 export default function Navbar() {

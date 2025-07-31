@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.2.0",
     "@react-three/drei": "^10.6.1",
     "@react-three/fiber": "^9.3.0",
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.11",
     "lucide-react": "^0.533.0",
