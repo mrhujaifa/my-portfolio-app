@@ -24,7 +24,7 @@ export const viewport = {
 
 export const metadata = {
   title:
-    "Md. Hujaifa Islam Shanto — Expert MERN Stack Developer | Full-Stack Portfolio | Mr. Hujaifa",
+    "Md. Hujaifa Islam Shanto — MERN Stack Developer | Full-Stack Portfolio | Mr. Hujaifa",
   description:
     "Official portfolio of Md. Hujaifa Islam Shanto (Mr. Hujaifa), a professional MERN Stack Developer from Bangladesh. Explore advanced React.js, Node.js, Express.js, MongoDB projects, blog, and contact info.",
   keywords: [
@@ -54,6 +54,55 @@ export const metadata = {
     "Developer Hujaifa",
     "mdhujaifaislamshanto",
     "md hujaifa islam shanto",
+    "mdhujaifa",
+    "mdhujaifaislam",
+    "md hujaifa",
+    "Hujaifa",
+    "Hujaifa islam",
+    "Hujaifa islam shanto",
+    "hujaifa",
+    "huzaifa",
+    "md huzaifa islam",
+    "Md. Huzaifa Islam",
+    "Md. Huzaifa Islam Shanto",
+    "Md. Huzaifa Islam Shanto",
+    "mdhuzaifaislam",
+    "md huzaifa islam portfolio",
+    "md huzaifa islam portfolio website",
+    "md huzaifa islam website",
+    "md huzaifa islam shanto website",
+    "md huzaifa islam shanto developer",
+    "md huzaifa islam developer",
+    "huzaifa developer",
+    "Md. Huzaifa Islam Shanto developer",
+    "Md. Huzaifa Islam developer",
+    "Md. Huzaifa Islam dev",
+    "Md. Huzaifa Islam web developer",
+    "Md. Huzaifa Islam mern stack developer",
+    "Md. Huzaifa Islam React",
+    "Md. Huzaifa Islam next js",
+    "mdhuzaifaislam",
+    "mdhuzaifaislam",
+    "mdhuzaifaislamshanto",
+    "Md. Huzaifa Islam Portfolio web site",
+    "Md. Huzaifa Islam Portfolio",
+    "Md. Huzaifa Islam personal web",
+    "Md. Huzaifa Islam personal website",
+    "md hujaifa islam shanto mern developer",
+    "hujaifa islam shanto portfolio 2025",
+    "best mern stack developer bangladesh",
+    "top web developer bangladesh",
+    "full stack developer portfolio 2025",
+    "react nextjs node mern developer",
+    "hujaifa islam shanto blog",
+    "personal portfolio website mern developer",
+    "bangladeshi software engineer 2025",
+    "hujaifa islam github projects",
+    "hire md hujaifa islam developer",
+    "software developer portfolio bangladesh",
+    "hujaifa islam shanto react projects",
+    "freelance web developer bangladesh",
+    "professional developer portfolio website",
   ],
   authors: [
     { name: "Md. Hujaifa Islam Shanto", url: "https://mrhujaifa.vercel.app" },
@@ -71,7 +120,8 @@ export const metadata = {
 
   // ➕ ADDED: let Google reliably pick your favicon (ICO)
   icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    icon: "/favicon.png",
+    shortcut: "/favicon.ico",
   },
 
   openGraph: {
@@ -147,6 +197,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <title>
+          Md. Hujaifa Islam Shanto — MERN Stack Developer | Full-Stack Portfolio
+          | Mr. Hujaifa
+        </title>
+
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="manifest" href="/manifest.json" />
@@ -155,7 +210,7 @@ export default function RootLayout({ children }) {
           name="description"
           content="Official portfolio of Md. Hujaifa Islam Shanto, a professional MERN Stack Developer from Bangladesh."
         />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://mrhujaifa.vercel.app/" />
         <meta
