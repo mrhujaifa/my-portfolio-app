@@ -239,9 +239,22 @@ export default function RootLayout({ children }) {
           href="/apple-touch-icon.png"
         />
 
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/web-app-manifest-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="/web-app-manifest-512x512.png"
+        />
+
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="apple-mobile-web-app-title" content="Your App Name" />
-        <meta name="application-name" content="Your App Name" />
+        <meta name="apple-mobile-web-app-title" content="Md. Hujaifa Islam" />
+        <meta name="application-name" content="Mr. Hujaifa" />
 
         <meta
           name="description"
@@ -254,7 +267,7 @@ export default function RootLayout({ children }) {
           name="keywords"
           content="Md. Hujaifa Islam, MERN Stack Developer, React Developer, Node.js Developer, Portfolio, Bangladesh Developer"
         />
-        <meta name="author" content="Md. Hujaifa Islam Shanto" />
+        <meta name="author" content="Md. Hujaifa Islam" />
         <meta name="robots" content="index, follow, noarchive" />
         <meta
           name="google-site-verification"
