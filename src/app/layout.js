@@ -211,6 +211,38 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="manifest" href="/manifest.json" />
 
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="apple-mobile-web-app-title" content="Your App Name" />
+        <meta name="application-name" content="Your App Name" />
+
         <meta
           name="description"
           content="Official portfolio of Md. Hujaifa Islam Shanto, a professional MERN Stack Developer from Bangladesh."
