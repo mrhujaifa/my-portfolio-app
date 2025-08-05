@@ -119,12 +119,12 @@ export default function Footer() {
               whileHover={{ scale: 1.05 }}
               aria-label="Send email"
             >
-              <FaRegPaperPlane className="text-lg" /> hujaifa.dev@gmail.com
+              <FaRegPaperPlane className="text-lg" /> mdhujaifaislamshanto@gmail.com
             </motion.a>
 
             <div className="flex gap-6 pt-1 text-2xl">
               <motion.a
-                href="https://github.com/"
+                href="https://github.com/mrhujaifa"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
@@ -134,7 +134,7 @@ export default function Footer() {
                 <FaGithub />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/"
+                href="https://linkedin.com/in/mrhujaifa"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
@@ -144,7 +144,7 @@ export default function Footer() {
                 <FaLinkedin />
               </motion.a>
               <motion.a
-                href="https://facebook.com/"
+                href="https://facebook.com/mrhujaifa0"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}

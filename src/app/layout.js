@@ -125,12 +125,12 @@ export const metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" }, // fallback
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
       { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
     ],
-    apple: "/apple-touch-icon.png", // iOS support
+    apple: "/apple-touch-icon.png",
     other: [
       {
         rel: "mask-icon",

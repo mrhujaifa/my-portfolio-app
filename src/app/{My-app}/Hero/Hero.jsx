@@ -72,26 +72,28 @@ const Hero = () => {
           {/* Buttons */}
           <div className="mt-10 lg:mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
             {/* Learn More Button */}
-            <button
+            <Link
+              href={"/skills"}
               className={`relative w-full sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
     bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5]
     shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
     focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`}
             >
-              <Link href={'/skills'} className="relative z-10">Learn More</Link>
+              <div className="relative z-10">Learn More</div>
               <span className="absolute inset-0 bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5] blur opacity-50 rounded-2xl"></span>
-            </button>
+            </Link>
 
             {/* Resume Button */}
-            <button
+            <Link
+              href="/contact"
               className={`relative w-full sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
     bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5]
     shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
     focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`}
             >
-              <Link href="/contact" className="relative z-10">Hire me</Link>
+              <div className="relative z-10">Hire me</div>
               <span className="absolute inset-0 bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5] blur opacity-50 rounded-2xl"></span>
-            </button>
+            </Link>
           </div>
         </div>
 
