@@ -25,7 +25,7 @@ export const viewport = {
 export const metadata = {
   title: "Md. Hujaifa Islam Shanto — MERN Stack Developer | Mr. Hujaifa",
   description:
-    "Official portfolio of Md. Hujaifa Islam Shanto (Mr. Hujaifa), a professional MERN Stack Developer from Bangladesh. Explore advanced React.js, Node.js, Express.js, MongoDB projects, blog, and contact info.",
+    "Official portfolio of Md. Hujaifa Islam Shanto (Mr. Hujaifa) , a professional MERN Stack Developer from Bangladesh. Explore advanced React.js, Node.js, Express.js, MongoDB projects, blog, and contact info.",
   keywords: [
     "Md. Hujaifa Islam",
     "Md. Hujaifa Islam Shanto",
@@ -123,10 +123,21 @@ export const metadata = {
     "max-video-preview": -1,
   },
 
-  // ➕ ADDED: let Google reliably pick your favicon (ICO)
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" }, // fallback
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: "/apple-touch-icon.png", // iOS support
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#5bbad5",
+      },
+    ],
   },
 
   openGraph: {
@@ -154,8 +165,8 @@ export const metadata = {
     title: "Md. Hujaifa Islam Shanto — MERN Stack Developer | Portfolio",
     description:
       "Portfolio website of MERN Stack Developer Md. Hujaifa Islam Shanto (Mr. Hujaifa). Check out projects, skills, and contact information.",
-    site: "@mr___hujaifa",
-    creator: "@mr___hujaifa",
+    site: "@Hujaifa__Islam",
+    creator: "@Hujaifa__Islam",
     images: ["https://mrhujaifa.vercel.app/images/about-img.png"],
   },
 
@@ -185,7 +196,7 @@ export const metadata = {
     sameAs: [
       "https://www.linkedin.com/in/mrhujaifa",
       "https://github.com/mrhujaifa",
-      "https://twitter.com/mr___hujaifa",
+      "https://x.com/Hujaifa__Islam",
     ],
     jobTitle: "MERN Stack Developer",
     worksFor: {
@@ -201,131 +212,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <title>
-          Md. Hujaifa Islam Shanto — MERN Stack Developer | Full-Stack Portfolio
-          | Mr. Hujaifa
-        </title>
-
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="manifest" href="/manifest.json" />
-
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="96x96"
-          href="/favicon-96x96.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="icon" href="/favicon.ico" />
-
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/web-app-manifest-192x192.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="512x512"
-          href="/web-app-manifest-512x512.png"
-        />
-
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="apple-mobile-web-app-title" content="Md. Hujaifa Islam" />
-        <meta name="application-name" content="Mr. Hujaifa" />
-
-        <meta
-          name="description"
-          content="Official portfolio of Md. Hujaifa Islam Shanto, a professional MERN Stack Developer from Bangladesh."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mrhujaifa.vercel.app/" />
-        <meta
-          name="keywords"
-          content="Md. Hujaifa Islam, MERN Stack Developer, React Developer, Node.js Developer, Portfolio, Bangladesh Developer"
-        />
-        <meta name="author" content="Md. Hujaifa Islam" />
-        <meta name="robots" content="index, follow, noarchive" />
-        <meta
-          name="google-site-verification"
-          content="3KUtrcoFYFof8Do-qtJVSQEfX0E41BmaEmxQ-3Uf3Ro"
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Person",
-                  "@id": "https://mrhujaifa.vercel.app/#person",
-                  name: "Md. Hujaifa Islam Shanto",
-                  url: "https://mrhujaifa.vercel.app",
-                  image: "https://mrhujaifa.vercel.app/images/about-img.png",
-                  jobTitle: "MERN Stack Developer",
-                  sameAs: [
-                    "https://www.linkedin.com/in/mrhujaifa",
-                    "https://github.com/mrhujaifa",
-                    "https://facebook.com/mrhujaifa0",
-                    "https://x.com/mr___hujaifa",
-                  ],
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://mrhujaifa.vercel.app/#website",
-                  url: "https://mrhujaifa.vercel.app",
-                  name: "Md. Hujaifa Islam Shanto — Portfolio",
-                  description:
-                    "Portfolio of Md. Hujaifa Islam Shanto — MERN Stack Developer from Bangladesh",
-                  publisher: {
-                    "@id": "https://mrhujaifa.vercel.app/#person",
-                  },
-                },
-                {
-                  "@type": "Organization",
-                  "@id": "https://mrhujaifa.vercel.app/#organization",
-                  name: "Md. Hujaifa Islam Shanto",
-                  url: "https://mrhujaifa.vercel.app",
-                  logo: {
-                    "@type": "ImageObject",
-                    url: "https://mrhujaifa.vercel.app/favicon-512.png",
-                  },
-                  sameAs: [
-                    "https://www.linkedin.com/in/mrhujaifa",
-                    "https://github.com/mrhujaifa",
-                    "https://facebook.com/mrhujaifa0",
-                  ],
-                },
-              ],
-            }),
-          }}
-        />
-      </head>
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#301403]`}
       >
