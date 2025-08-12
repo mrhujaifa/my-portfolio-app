@@ -27,12 +27,12 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 // Nav items
 const navItems = [
-  { name: "Home", icon: <FaHome />, path: "/" },
-  { name: "Skills", icon: <FaCode />, path: "/skills" },
-  { name: "Projects", icon: <FaImage />, path: "/projects" },
-  { name: "Contact", icon: <FaEnvelope />, path: "/contact" },
-  { name: "Blogs", icon: <RiBloggerLine size={20} />, path: "/blogs" },
-
+  { name: "Home", icon: <FaHome size={20} />, path: "/" },
+  { name: "Skills", icon: <FaCode size={23} />, path: "/skills" },
+  { name: "Education", icon: <FaGraduationCap size={23} />, path: "/skills" },
+  { name: "Projects", icon: <FaImage size={19} />, path: "/projects" },
+  { name: "Contact", icon: <FaEnvelope size={19} />, path: "/contact" },
+  { name: "Blogs", icon: <RiBloggerLine size={23} />, path: "/blogs" },
 ];
 
 export default function Navbar() {
@@ -120,7 +120,7 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-3 lg:gap-4 text-white">
             <a
-              href="/resume.pdf"
+              href="/resume/Md. Hujaifa Islam Shanto.pdf"
               download
               className="md:hidden lg:flex items-center gap-2 px-5 py-2 border border-purple-600 text-white rounded-lg text-sm font-semibold shadow-lg hover:scale-110 hover:shadow-xl transition-transform duration-300"
               aria-label="Download Resume"

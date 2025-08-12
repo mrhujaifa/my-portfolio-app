@@ -73,7 +73,7 @@ const Hero = () => {
           <div className="mt-10 lg:mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
             {/* Learn More Button */}
             <Link
-              href={"/skills"}
+              href={"https://github.com/mrhujaifa"}
               className={`relative w-full sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
     bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5]
     shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
