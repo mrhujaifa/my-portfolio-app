@@ -28,10 +28,10 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700"] });
 // Nav items
 const navItems = [
   { name: "Home", icon: <FaHome size={20} />, path: "/" },
-  { name: "Skills", icon: <FaCode size={23} />, path: "/skills" },
-  { name: "Education", icon: <FaGraduationCap size={23} />, path: "/skills" },
-  { name: "Projects", icon: <FaImage size={19} />, path: "/projects" },
-  { name: "Contact", icon: <FaEnvelope size={19} />, path: "/contact" },
+  { name: "Skills", icon: <FaCode size={22} />, path: "/skills" },
+  { name: "Education", icon: <FaGraduationCap size={22} />, path: "/education" },
+  { name: "Projects", icon: <FaImage size={18} />, path: "/projects" },
+  { name: "Contact", icon: <FaEnvelope size={18} />, path: "/contact" },
   { name: "Blogs", icon: <RiBloggerLine size={23} />, path: "/blogs" },
 ];
 
@@ -79,7 +79,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center space-x-4 text-white">
+          <ul className="hidden md:flex items-center space-x-4 font-bold text-white">
             {navItems.map((item, idx) => (
               <li key={idx}>
                 {item.path.startsWith("/") ? (

@@ -74,7 +74,7 @@ const Hero = () => {
             {/* Learn More Button */}
             <Link
               href={"https://github.com/mrhujaifa"}
-              className={`relative w-full sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
+              className={`relative w-full sm:w-auto text-center px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
     bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5]
     shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
     focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`}
@@ -86,7 +86,7 @@ const Hero = () => {
             {/* Resume Button */}
             <Link
               href="/contact"
-              className={`relative w-full sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
+              className={`relative w-full text-center sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
     bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5]
     shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
     focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`}

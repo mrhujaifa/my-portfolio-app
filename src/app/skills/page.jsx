@@ -235,7 +235,7 @@ export default function SkillsShowcase() {
   ];
 
   return (
-    <div className="mt-70">
+    <div className="mt-60 lg:mt-70">
       <SkillSectionTitle></SkillSectionTitle>
       <section className="relative isolate">
         {/* ambient glow background */}
