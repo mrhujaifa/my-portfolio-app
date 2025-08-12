@@ -23,7 +23,7 @@ export default function CallToAction() {
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <div className=" flex gap-2 lg:justify-center items-center my-8">
+        <div className=" flex gap-2 md:mx-15 lg:justify-center items-center my-8">
           <Image
             src="/images/contact.png"
             alt="Md. Hujaifa Islam Shanto"

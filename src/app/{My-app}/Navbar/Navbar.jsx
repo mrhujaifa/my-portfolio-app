@@ -83,7 +83,7 @@ export default function Navbar() {
             {navItems.map((item, idx) => (
               <li key={idx}>
                 {item.path.startsWith("/") ? (
-                  <Link
+                  <Link 
                     href={item.path}
                     className={`relative flex items-center gap-2 px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       isActive(item.path)
@@ -196,9 +196,9 @@ export default function Navbar() {
               )
             )}
             <a
-              href="/resume.pdf"
+              href="/resume/Md. Hujaifa Islam Shanto.pdf"
               download
-              className="flex w-30 md:w-full lg:w-full items-center gap-2 px-4 py-2 border border-purple-600 text-white rounded-md shadow-md hover:scale-105 transition-transform"
+              className="flex w-full justify-center md:w-full lg:w-full items-center gap-2 px-4 py-2 border border-purple-600 text-white rounded-md shadow-md hover:scale-105 transition-transform"
             >
               <FaDownload /> Resume
             </a>
