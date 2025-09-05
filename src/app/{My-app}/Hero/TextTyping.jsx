@@ -1,82 +1,132 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const texts = [
-  "Hi, I'm Hujaifa.",
-  "Full-Stack Developer specialized in MERN.",
-  "Creating efficient & scalable web solutions.",
-  "Passionate about clean code and UX.",
-  "Let’s build your next web application!",
+const GLYPHS =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*?<>±/\\|".split(
+    ""
+  );
+
+const LINES = [
+  "Hi, I'm Hujaifa 👋",
+  "MERN Stack Developer | Frontend Developer",
+  "Crafting fast & scalable digital solutions",
+  "Passionate about clean code & sleek UI/UX ",
+  "Turning ideas into impactful web apps ",
+  "Keep learning, keep building ",
 ];
 
-const AutoTypingWithDots = () => {
-  const [textIndex, setTextIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
-  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
-  const [dotCount, setDotCount] = useState(1);
+function ScrambleText({ text, duration = 1200, hold = 1200, className = "" }) {
+  const [output, setOutput] = useState("");
+  const startRef = useRef(0);
+  const rafRef = useRef(0);
 
-  // Typing animation
+  const chars = useMemo(() => text.split(""), [text]);
+
   useEffect(() => {
-    const currentText = texts[textIndex];
-    if (charIndex < currentText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + currentText.charAt(charIndex));
-        setCharIndex((prev) => prev + 1);
-      }, 80);
-      return () => clearTimeout(timeout);
-    } else {
-      const pause = setTimeout(() => {
-        setIsAnimatingOut(true);
-      }, 1500);
-      return () => clearTimeout(pause);
-    }
-  }, [charIndex, textIndex]);
+    setOutput("");
+    cancelAnimationFrame(rafRef.current);
+    startRef.current = performance.now();
 
-  // Zoom-out after full sentence
-  useEffect(() => {
-    if (isAnimatingOut) {
-      const next = setTimeout(() => {
-        setDisplayedText("");
-        setCharIndex(0);
-        setTextIndex((prev) => (prev + 1) % texts.length);
-        setIsAnimatingOut(false);
-      }, 600);
-      return () => clearTimeout(next);
-    }
-  }, [isAnimatingOut]);
+    const animate = (now) => {
+      const elapsed = now - startRef.current;
+      const t = Math.min(1, elapsed / duration);
 
-  // ChatGPT-style dot animation: . .. ... cycling
-  useEffect(() => {
-    const dotTimer = setInterval(() => {
-      setDotCount((prev) => (prev % 3) + 1);
-    }, 500); // every 0.5s dot updates
-    return () => clearInterval(dotTimer);
-  }, []);
+      const easeOutCubic = (x) => 1 - Math.pow(1 - x, 3);
+      const progress = easeOutCubic(t);
 
-  const dots = ".".repeat(dotCount);
+      const lockCount = Math.floor(progress * chars.length);
+
+      let next = "";
+      for (let i = 0; i < chars.length; i++) {
+        if (i < lockCount) next += chars[i];
+        else next += GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      }
+      setOutput(next);
+
+      if (t < 1) {
+        rafRef.current = requestAnimationFrame(animate);
+      } else {
+        setOutput(text);
+      }
+    };
+
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [text, duration]);
 
   return (
-    <div className="relative h-20 flex text-md lg:text-3xl font-extrabold text-white overflow-hidden">
-      <AnimatePresence mode="wait">
-        {!isAnimatingOut && (
-          <motion.div
-            key={textIndex}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.2 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center"
-          >
-            <span>{displayedText}</span>
-            <span className="ml-2 text-green-400">{dots}</span>
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className={`inline-flex items-baseline ${className}`}>
+      <span className="tracking-tight">{output}</span>
+      <motion.span
+        aria-hidden
+        className="ml-1 w-3 h-6 rounded-sm bg-gradient-to-b from-emerald-400/90 to-sky-400/90"
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ duration: 0.9, repeat: Infinity }}
+      />
     </div>
   );
-};
+}
 
-export default AutoTypingWithDots;
+export default function HackerTyping({
+  lines = LINES,
+  lineDuration = 1200,
+  hold = 1200,
+}) {
+  const [index, setIndex] = useState(0);
+  const [phase, setPhase] = useState("scrambling");
+
+  useEffect(() => {
+    let timer;
+    if (phase === "scrambling") {
+      timer = setTimeout(() => setPhase("holding"), lineDuration + 50);
+    } else if (phase === "holding") {
+      timer = setTimeout(() => {
+        setPhase("scrambling");
+        setIndex((p) => (p + 1) % lines.length);
+      }, hold);
+    }
+    return () => clearTimeout(timer);
+  }, [phase, lineDuration, hold, lines.length]);
+
+  return (
+    <div className="relative flex h-24 items-center justify-start">
+      {/* Ambient glow backdrop */}
+      <div className="pointer-events-none absolute -inset-6 " />
+
+      <div className="relative rounded-2xl  w-fit">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className=""
+          >
+            <ScrambleText
+              text={lines[index]}
+              duration={lineDuration}
+              hold={hold}
+              className="text-xl lg:text-3xl font-extrabold bg-gradient-to-r from-emerald-300 via-sky-300 to-fuchsia-300 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(16,185,129,0.35)]"
+            />
+
+            {/* Underbar shimmer effect */}
+            <div className="mt-3 h-px w-full overflow-hidden">
+              <motion.div
+                className="h-px w-1/3 bg-gradient-to-r from-transparent via-emerald-400/70 to-transparent"
+                animate={{ x: ["-30%", "120%"] }}
+                transition={{
+                  duration: 1.8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}

@@ -5,9 +5,9 @@ const ProfileInformation = () => {
   return (
     <div className="w-full h-full">
       <div className="relative w-full max-w-4xl mx-auto rounded-lg p-[2px]">
-        <div className="rounded-lg border border-gray-600 overflow-hidden ">
+        <div className="rounded-lg border border-[#2a0e61] overflow-hidden ">
           {/* Header */}
-          <div className="flex items-center px-4 py-2 w-full border-b border-gray-600">
+          <div className="flex items-center px-4 py-2 w-full border-b border-[#2a0e61]">
             <div className="flex space-x-2">
               <span className="w-3 h-3 bg-red-500 rounded-full"></span>
               <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
@@ -33,7 +33,7 @@ const ProfileInformation = () => {
             <p className="ml-4">
               <span className="text-blue-300">title</span>:{" "}
               <span className="text-green-400">
-                'MERN STACK developer | Cloud Enthusiast | Problem Solver'
+                'MERN STACK developer | Frontend Developer | Problem Solver'
               </span>
               ,
             </p>
@@ -56,7 +56,6 @@ const ProfileInformation = () => {
             </p>
             <p className="ml-8">
               <span className="text-green-400">'Git'</span>,{" "}
-              <span className="text-green-400">'Discord Development'</span>
             </p>
             <p className="ml-4">],</p>
 
@@ -69,7 +68,7 @@ const ProfileInformation = () => {
             <p className="ml-4">
               <span className="text-blue-300">availability</span>:{" "}
               <span className="text-green-400">
-                'Open to freelance & full-time roles'
+                'Open to remote full-time roles'
               </span>
               ,
             </p>
@@ -80,14 +79,14 @@ const ProfileInformation = () => {
             <p className="ml-8">
               <span className="text-blue-300">github</span>:{" "}
               <span className="text-green-400">
-                'https://github.com/hujaifa'
+                'https://github.com/mrhujaifa'
               </span>
               ,
             </p>
             <p className="ml-8">
               <span className="text-blue-300">linkedin</span>:{" "}
               <span className="text-green-400">
-                'https://linkedin.com/in/hujaifa'
+                'https://linkedin.com/in/mrhujaifa'
               </span>
               ,
             </p>
