@@ -77,19 +77,41 @@ const ProfileInformation = () => {
               <span className="text-blue-300">social</span>: {"{"}
             </p>
             <p className="ml-8">
-              <span className="text-blue-300">github</span>:{" "}
-              <span className="text-green-400">
-                'https://github.com/mrhujaifa'
-              </span>
+              <span className="text-blue-300">GitHub</span>:{" "}
+              <a
+                href="https://github.com/mrhujaifa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-400 hover:underline"
+              >
+                https://github.com/mrhujaifa
+              </a>
               ,
             </p>
+
             <p className="ml-8">
-              <span className="text-blue-300">linkedin</span>:{" "}
-              <span className="text-green-400">
-                'https://linkedin.com/in/mrhujaifa'
-              </span>
+              <span className="text-blue-300">LinkedIn</span>:{" "}
+              <a
+                href="https://linkedin.com/in/mrhujaifa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-400 hover:underline"
+              >
+                https://linkedin.com/in/mrhujaifa
+              </a>
               ,
             </p>
+
+            <p className="ml-8">
+              <span className="text-blue-300">Email</span>:{" "}
+              <a
+                href="mailto:mdhujaifaislamshanto@gmail.com"
+                className="text-green-400 hover:underline"
+              >
+                mdhujaifaislamshanto@gmail.com
+              </a>
+            </p>
+
             <p className="ml-4">{"},"}</p>
 
             <p className="ml-4">

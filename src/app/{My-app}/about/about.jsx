@@ -1,15 +1,8 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaInfoCircle,
-  FaFacebook,
-  FaFacebookF,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { Lobster } from "next/font/google";
 
 const lobster = Lobster({
@@ -18,17 +11,72 @@ const lobster = Lobster({
   variable: "--font-lobster",
 });
 
+import Image from "next/image";
+
+const socialLinks = [
+  {
+    href: "mailto:mdhujaifaislamshanto@gmail.com",
+    icon: (
+      <Image
+        src="/icons/gmail.png" // ✅ goes in public/images/
+        alt="Gmail"
+        width={20}
+        height={20}
+        className="object-contain"
+      />
+    ),
+    title: "Gmail",
+    bgGradient: "bg-white",
+    glowColor: "shadow-[0_0_14px_3px_rgba(217,48,37,0.6)]",
+    textColor: "text-white",
+  },
+
+  {
+    href: "https://linkedin.com/in/mrhujaifa",
+    icon: <FaLinkedin size={24} />,
+    title: "LinkedIn",
+    bgGradient: "bg-gradient-to-tr from-[#0a66c2] to-[#1e8de9]",
+    glowColor: "shadow-[0_0_12px_3px_rgba(10,102,194,0.6)]",
+    textColor: "text-white",
+  },
+  {
+    href: "https://github.com/mrhujaifa",
+    icon: <FaGithub size={24} />,
+    title: "GitHub",
+    bgGradient: "bg-gradient-to-tr from-[#333333] to-[#666666]",
+    glowColor: "shadow-[0_0_14px_3px_rgba(255,255,255,0.5)]",
+    textColor: "text-white",
+  },
+  {
+    href: "https://facebook.com/mrhujaifa0",
+    icon: <FaFacebookF size={24} />,
+    title: "Facebook",
+    bgGradient: "bg-gradient-to-tr from-[#1877F2] to-[#4A90E2]",
+    glowColor: "shadow-[0_0_14px_3px_rgba(24,119,242,0.6)]",
+    textColor: "text-white",
+  },
+  {
+    href: "https://x.com/Hujaifa__Islam",
+    // Using react-icons for Twitter
+    icon: <FaTwitter size={24} />,
+    title: "X / Twitter",
+    bgGradient: "bg-gradient-to-tr from-[#1DA1F2] to-[#0d8ddb]", // Twitter blue gradient
+    glowColor: "shadow-[0_0_14px_3px_rgba(29,161,242,0.6)]", // subtle blue glow
+    textColor: "text-white",
+  },
+];
+
 export default function About() {
   return (
     <div className=" lg:mt-20">
       <div className="container mx-auto flex gap-2 my-3 px-4 lg:px-0 lg:justify-center items-center">
         <Image
-              src="/images/about (1).png"
-              alt="Md. Hujaifa Islam Shanto"
-              width={45}
-              height={45}
-              className="w-11"
-            />
+          src="/images/about (1).png"
+          alt="Md. Hujaifa Islam Shanto"
+          width={45}
+          height={45}
+          className="w-11"
+        />
         <h1
           className={` font-bold text-3xl md:text-5xl lg:text-5xl font-bold bg-gradient-to-r from-[#0192b0] via-[#5073f6] to-[#8b6efa] bg-clip-text text-transparent text-center my-5 ${lobster.className}`}
         >
@@ -119,32 +167,7 @@ export default function About() {
               </h3>
 
               <div className="flex items-center gap-3 mt-4">
-                {[
-                  {
-                    href: "https://linkedin.com/in/mrhujaifa",
-                    icon: <FaLinkedin size={24} />,
-                    title: "LinkedIn",
-                    bgGradient: "bg-gradient-to-tr from-[#0a66c2] to-[#1e8de9]",
-                    glowColor: "shadow-[0_0_12px_3px_rgba(10,102,194,0.6)]",
-                    textColor: "text-white",
-                  },
-                  {
-                    href: "https://github.com/mrhujaifa",
-                    icon: <FaGithub size={24} />,
-                    title: "GitHub",
-                    bgGradient: "bg-gradient-to-tr from-[#333333] to-[#666666]",
-                    glowColor: "shadow-[0_0_14px_3px_rgba(255,255,255,0.5)]",
-                    textColor: "text-white",
-                  },
-                  {
-                    href: "https://facebook.com/mrhujaifa0",
-                    icon: <FaFacebookF size={24} />,
-                    title: "Facebook",
-                    bgGradient: "bg-gradient-to-tr from-[#1877F2] to-[#4A90E2]", // Facebook blue gradient
-                    glowColor: "shadow-[0_0_14px_3px_rgba(24,119,242,0.6)]", // subtle blue glow
-                    textColor: "text-white",
-                  },
-                ].map(
+                {socialLinks.map(
                   (
                     { href, icon, title, bgGradient, glowColor, textColor },
                     i

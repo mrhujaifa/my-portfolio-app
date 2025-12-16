@@ -20,7 +20,12 @@ export default function Footer() {
     <footer className="relative w-full pt-16 pb-10 text-white">
       <div className="container mx-auto px-6 ">
         {/* Top Divider */}
-        <div className="w-full h-[1.5px] bg-gradient-to-r from-transparent via-[#2a0e61] to-transparent mb-14" />
+        {/* <motion.div
+          className="absolute top-0 left-0 h-full w-1/2 bg-gradient-to-r from-transparent via-purple-400/60 to-transparent rounded"
+          initial={{ x: "-50%" }}
+          animate={{ x: ["-50%", "100%"] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+        /> */}
 
         {/* Grid Sections */}
         <div className="grid md:grid-cols-4 grid-cols-1 gap-12">
@@ -119,7 +124,8 @@ export default function Footer() {
               whileHover={{ scale: 1.05 }}
               aria-label="Send email"
             >
-              <FaRegPaperPlane className="text-lg" /> mdhujaifaislamshanto@gmail.com
+              <FaRegPaperPlane className="text-lg" />{" "}
+              mdhujaifaislamshanto@gmail.com
             </motion.a>
 
             <div className="flex gap-6 pt-1 text-2xl">
@@ -159,7 +165,8 @@ export default function Footer() {
 
         {/* Bottom Line */}
         <div className="mt-14 text-center text-xs text-white/40 tracking-wide select-none">
-          © {new Date().getFullYear()} Md. Hujaifa Islam Shanto — All rights reserved.
+          © {new Date().getFullYear()} Md. Hujaifa Islam Shanto1 — All rights
+          reserved.
         </div>
       </div>
     </footer>
