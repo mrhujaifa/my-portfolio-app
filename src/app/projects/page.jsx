@@ -4,7 +4,7 @@ import Projects from './projects';
 
 const page = () => {
     return (
-        <div className='container mx-auto mt-60 lg:mt-75  mb-10'>
+        <div className='container mx-auto mt-60 lg:mt-85'>
             <Projects></Projects>
         </div>
     );

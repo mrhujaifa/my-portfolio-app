@@ -195,8 +195,8 @@ export default function EducationShowcase() {
   
 
   return (
-    <div className="mt-55 lg:mt-70">
-      <h2 className="mb-10 text-center">
+    <div className="mt-55 lg:mt-85">
+      <h2 className="mb-2 text-center">
         <EducationTitle></EducationTitle>
       </h2>
       <section className="mx-auto container px-4 py-8 sm:px-6 lg:px-0">

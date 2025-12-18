@@ -182,6 +182,7 @@ export default function SkillsShowcase() {
         { label: "HTML5", icon: "/skills/html.png" },
         { label: "CSS3", icon: "/skills/css.png" },
         { label: "JavaScript", icon: "/skills/js.png" },
+        { label: "TypeScript", icon: "/skills/typescript.png" },
         { label: "React.js", icon: "/skills/react.png" },
         { label: "Next.js", icon: "/skills/nextjs.webp" },
         { label: "React Router", icon: "/skills/react-router.webp" },
@@ -194,6 +195,8 @@ export default function SkillsShowcase() {
       pills: [
         { label: "Node.js", icon: "/skills/node.png" },
         { label: "Express.js", icon: "/skills/express.png" },
+        { label: "Prisma", icon: "/skills/prisma.svg" },
+        { label: "PostgreSQL", icon: "/skills/postgre.png" },
         { label: "MongoDB", icon: "/skills/mongodb.png" },
         { label: "Stripe", icon: "/skills/Stripe.png" },
         { label: "Jwt", icon: "/skills/jwt.png" },
@@ -235,7 +238,7 @@ export default function SkillsShowcase() {
   ];
 
   return (
-    <div className="mt-60 lg:mt-70">
+    <div className="mt-60 lg:mt-85">
       <SkillSectionTitle></SkillSectionTitle>
       <section className="relative isolate">
         {/* ambient glow background */}
@@ -245,7 +248,7 @@ export default function SkillsShowcase() {
           pointer-events-none absolute inset-0 -z-10
         "
         />
-        <div className="mx-auto container px-4 py-14 sm:px-6 lg:px-0">
+        <div className="mx-auto container px-4 py-6 sm:px-6 lg:px-0">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {sections.map((s) => (
               <SectionCard key={s.title} {...s} />

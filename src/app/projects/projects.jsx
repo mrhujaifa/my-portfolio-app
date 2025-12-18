@@ -252,7 +252,7 @@ export default function SkillsShowcase() {
           className="pointer-events-none absolute inset-0 -z-10"
         />
         <div className="mx-auto container px-4 sm:px-6 lg:px-0">
-          <div className="grid grid-cols-1 gap-6 md:gap-20 lg:gap-25">
+          <div className="grid grid-cols-1 gap-6 md:gap-20 lg:gap-25 py-8">
             {sections.map((s) => (
               <SectionCard key={s.title} {...s} />
             ))}
