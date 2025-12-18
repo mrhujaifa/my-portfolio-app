@@ -34,15 +34,13 @@ import Link from "next/link";
 import React from "react";
 
 export default function PrimaryButton({
-  href,
   text,
   icon,
   target = "_self",
   className = "",
 }) {
   return (
-    <Link
-      href={href} // আপনার রেজ্যুমে ফাইলের পাথ এখানে দিন
+    <div
       target={target}
       className="relative inline-flex items-center justify-center px-8 py-3 font-bold text-white transition-all duration-300 ease-in-out group focus:outline-none"
     >
@@ -55,6 +53,6 @@ export default function PrimaryButton({
         {icon}
         {text}
       </span>
-    </Link>
+    </div>
   );
 }

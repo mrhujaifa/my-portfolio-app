@@ -12,7 +12,6 @@ const lobster = Lobster({
 });
 
 import Image from "next/image";
-import Link from "next/link";
 import PrimaryButton from "@/app/Components/PrimaryBtn";
 
 const socialLinks = [
@@ -89,14 +88,14 @@ export default function About() {
         id="about"
         className="px-4 lg:px-6 lg:py-5 flex items-center justify-center"
       >
-        <div className="container w-full flex flex-col md:flex-row items-center gap-10 border border-[#2a0e61] py-8 px-5 md:p-12 rounded-xl">
+        <div className="container w-full flex flex-col lg:flex-row items-center gap-10 border border-[#2a0e61] py-8 px-5 md:p-12 rounded-xl">
           {/* Profile Image with animated border */}
 
           <motion.div
             initial={{ boxShadow: "0 0 10px rgba(42,14,97,0.4)" }}
             whileHover={{ boxShadow: "0 0 30px 4px rgba(99,102,241,0.8)" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="w-full md:w-[300px] h-[350px] relative rounded-lg border border-gray-700 cursor-pointer overflow-hidden"
+            className="w-full h-80 md:h-[650px] lg:w-[340px] lg:h-[380px] relative rounded-lg border border-gray-700 cursor-pointer overflow-hidden"
           >
             <Image
               src="/images/about-img.png"
@@ -222,30 +221,30 @@ export default function About() {
                 )}
 
                 <div className="hidden lg:block px-8">
-                  <PrimaryButton
-                    href={"skill"}
-                    text={"Resume"}
-                    icon={
-                      <svg
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                      </svg>
-                    }
-                    target="_blank"
-                  />
+                  <a href="/resume/Md. Hujaifa Islam Shanto.pdf" download={true}>
+                    <PrimaryButton
+                      text={"Resume"}
+                      icon={
+                        <svg
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                          />
+                        </svg>
+                      }
+                    />
+                  </a>
                 </div>
               </div>
-              <div className="lg:hidden md:hidden">
+              <div className="lg:hidden md:hidden mt-5">
+                <a href="/resume/Md. Hujaifa Islam Shanto.pdf" download={true}>
                   <PrimaryButton
-                    href={"skill"}
                     text={"Resume"}
                     icon={
                       <svg
@@ -261,9 +260,9 @@ export default function About() {
                         />
                       </svg>
                     }
-                    target="_blank"
                   />
-                </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
