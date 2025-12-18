@@ -33,7 +33,7 @@ const ProfileInformation = () => {
             <p className="ml-4">
               <span className="text-blue-300">title</span>:{" "}
               <span className="text-green-400">
-                'MERN STACK developer | Frontend Developer | Problem Solver'
+                'Full Stack Software developer | Frontend Developer | Problem Solver'
               </span>
               ,
             </p>

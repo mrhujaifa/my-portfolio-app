@@ -4,7 +4,6 @@ import React from "react";
 import styles from "./Hero.module.css";
 import AutoTyping from "./TextTyping";
 import ProfileCard from "./InformationCard";
-import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 
 const Hero = () => {
@@ -54,7 +53,7 @@ const Hero = () => {
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
               I'm a{" "}
               <span className="text-[#5b77f2] font-semibold">
-                MERN Stack Developer
+                Full Stack Software Developer
               </span>{" "}
               who crafts
               <span className="text-[#00b3e5] font-semibold">

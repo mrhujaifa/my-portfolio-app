@@ -165,7 +165,7 @@ export default function Footer() {
 
         {/* Bottom Line */}
         <div className="mt-14 text-center text-xs text-white/40 tracking-wide select-none">
-          © {new Date().getFullYear()} Md. Hujaifa Islam Shanto11 — All rights
+          © {new Date().getFullYear()} Md. Hujaifa Islam Shanto — All rights
           reserved.
         </div>
       </div>

@@ -9,14 +9,14 @@ const lobster = Lobster({
   variable: "--font-lobster",
 });
 export const metadata = {
-  title: "Md Hujaifa Islam Shanto | Technical Skills - MERN Stack Developer",
+  title: "Md Hujaifa Islam Shanto | Technical Skills - Full Stack Software Developer",
   description:
-    "Discover the comprehensive technical skills of Md Hujaifa Islam Shanto, a proficient MERN Stack developer skilled in React, Node.js, MongoDB, and modern web technologies.",
+    "Discover the comprehensive technical skills of Md Hujaifa Islam Shanto, a proficient Full Stack Software developer skilled in React, Node.js, MongoDB, and modern web technologies.",
   keywords: [
     "Md Hujaifa Islam Shanto",
     "Mr Hujaifa",
     "Md Hujaifa Islam",
-    "MERN Stack Developer",
+    "Full Stack Software Developer",
     "Technical Skills",
     "React Developer",
     "Node.js Developer",
@@ -29,7 +29,7 @@ export const metadata = {
     "Mr. Huzifa",
   ],
   openGraph: {
-    title: "Md Hujaifa Islam Shanto | Technical Skills - MERN Stack Developer",
+    title: "Md Hujaifa Islam Shanto | Technical Skills - Full Stack Software Developer",
     description:
       "Explore the expert skills of Md Hujaifa Islam Shanto in frontend and backend development, including React, Node.js, MongoDB, and cloud deployment.",
     url: "https://mrhujaifa.vercel.app/skills",
@@ -48,7 +48,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Md Hujaifa Islam Shanto | Technical Skills",
     description:
-      "Comprehensive MERN Stack and modern web development skills by Md Hujaifa Islam Shanto.",
+      "Comprehensive Full Stack Software and modern web development skills by Md Hujaifa Islam Shanto.",
     images: ["https://mrhujaifa.vercel.app/twitter-card.png"],
   },
 };

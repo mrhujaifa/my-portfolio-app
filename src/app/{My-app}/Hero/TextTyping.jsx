@@ -11,7 +11,7 @@ const GLYPHS =
 // Responsive, short & modern text lines
 const LINES = [
   "Hi, I'm Hujaifa 👋",
-  "MERN Stack Developer | Frontend Dev",
+  "Full Stack Software Developer | Frontend Dev",
   "Crafting scalable web solutions ⚡",
   "Clean code & sleek UI/UX 🎨",
   "Turning ideas into impact 💻",

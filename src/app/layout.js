@@ -23,14 +23,14 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Md. Hujaifa Islam Shanto — MERN Stack Developer | Mr. Hujaifa",
+  title: "Md. Hujaifa Islam Shanto — Full Stack Devloper | Mr. Hujaifa",
   description:
-    "Official portfolio of Md. Hujaifa Islam Shanto (Mr. Hujaifa) , a professional MERN Stack Developer from Bangladesh. Explore advanced React.js, Node.js, Express.js, MongoDB projects, blog, and contact info.",
+    "Official portfolio of Md. Hujaifa Islam Shanto (Mr. Hujaifa) , a professional Full Stack Developer from Bangladesh. Explore advanced React.js, Node.js, Express.js, MongoDB projects, blog, and contact info.",
   keywords: [
     "Md. Hujaifa Islam",
     "Md. Hujaifa Islam Shanto",
     "Mr. Hujaifa",
-    "MERN Stack Developer Bangladesh",
+    "Full Stack Developer Bangladesh",
     "Full-Stack Developer Bangladesh",
     "React Developer",
     "Next.js Developer",
@@ -77,7 +77,7 @@ export const metadata = {
     "Md. Huzaifa Islam developer",
     "Md. Huzaifa Islam dev",
     "Md. Huzaifa Islam web developer",
-    "Md. Huzaifa Islam mern stack developer",
+    "Md. Huzaifa Islam Full stack developer",
     "Md. Huzaifa Islam React",
     "Md. Huzaifa Islam next js",
     "mdhuzaifaislam",
@@ -87,14 +87,14 @@ export const metadata = {
     "Md. Huzaifa Islam Portfolio",
     "Md. Huzaifa Islam personal web",
     "Md. Huzaifa Islam personal website",
-    "md hujaifa islam shanto mern developer",
+    "md hujaifa islam shanto Full developer",
     "hujaifa islam shanto portfolio 2025",
-    "best mern stack developer bangladesh",
+    "best Full stack developer bangladesh",
     "top web developer bangladesh",
     "full stack developer portfolio 2025",
-    "react nextjs node mern developer",
+    "react nextjs node Full developer",
     "hujaifa islam shanto blog",
-    "personal portfolio website mern developer",
+    "personal portfolio website Full developer",
     "bangladeshi software engineer 2025",
     "hujaifa islam github projects",
     "hire md hujaifa islam developer",
@@ -142,9 +142,9 @@ export const metadata = {
 
   openGraph: {
     title:
-      "Md. Hujaifa Islam Shanto — MERN Stack Developer | Professional Portfolio",
+      "Md. Hujaifa Islam Shanto — Full Stack Developer | Professional Portfolio",
     description:
-      "Explore the professional portfolio of Md. Hujaifa Islam Shanto, a MERN Stack Developer specializing in React, Node, Express, MongoDB, and Next.js.",
+      "Explore the professional portfolio of Md. Hujaifa Islam Shanto, a Full Stack Developer specializing in React, Node, Express, MongoDB, and Next.js.",
     url: "https://mrhujaifa.vercel.app",
     siteName: "Mr. Hujaifa Portfolio",
     images: [
@@ -152,7 +152,7 @@ export const metadata = {
         url: "https://mrhujaifa.vercel.app/images/about-img.png",
         width: 1200,
         height: 630,
-        alt: "Md. Hujaifa Islam Shanto - MERN Stack Developer Portfolio",
+        alt: "Md. Hujaifa Islam Shanto - Full Stack Developer Portfolio",
         type: "image/png",
       },
     ],
@@ -162,9 +162,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Md. Hujaifa Islam Shanto — MERN Stack Developer | Portfolio",
+    title: "Md. Hujaifa Islam Shanto — Full Stack Developer | Portfolio",
     description:
-      "Portfolio website of MERN Stack Developer Md. Hujaifa Islam Shanto (Mr. Hujaifa). Check out projects, skills, and contact information.",
+      "Portfolio website of Full Stack Developer Md. Hujaifa Islam Shanto (Mr. Hujaifa). Check out projects, skills, and contact information.",
     site: "@Hujaifa__Islam",
     creator: "@Hujaifa__Islam",
     images: ["https://mrhujaifa.vercel.app/images/about-img.png"],
@@ -198,14 +198,14 @@ export const metadata = {
       "https://github.com/mrhujaifa",
       "https://x.com/Hujaifa__Islam",
     ],
-    jobTitle: "MERN Stack Developer",
+    jobTitle: "Full Stack Developer",
     worksFor: {
       "@type": "Organization",
       name: "Self-employed",
     },
     image: "https://mrhujaifa.vercel.app/images/about-img.png",
     description:
-      "Professional MERN Stack Developer specializing in React, Node.js, Express.js, MongoDB and Next.js.",
+      "Professional Full Stack Developer specializing in React, Node.js, Express.js, MongoDB and Next.js.",
   },
 };
 
@@ -228,7 +228,7 @@ export default function RootLayout({ children }) {
             style={{ padding: "12px", background: "#0b0b0b", color: "#fff" }}
           >
             <h1 style={{ margin: 0 }}>
-              Md. Hujaifa Islam Shanto — MERN Stack Developer (React, Next.js,
+              Md. Hujaifa Islam Shanto — Full Stack Developer (React, Next.js,
               Node, Express, MongoDB)
             </h1>
             <p style={{ margin: "8px 0 0" }}>

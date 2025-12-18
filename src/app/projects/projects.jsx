@@ -4,13 +4,13 @@ import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
 import ProjectTitle from "./ProjectTitle";
 export const metadata = {
-  title: "Md Hujaifa Islam Shanto | Projects - MERN Stack Developer",
+  title: "Md Hujaifa Islam Shanto | Projects - Full Stack Software Developer",
   description:
-    "Explore featured web development projects by Md Hujaifa Islam Shanto, a passionate MERN Stack Developer. Discover full-stack applications built with React, Node.js, MongoDB, and more.",
+    "Explore featured web development projects by Md Hujaifa Islam Shanto, a passionate Full Stack Software Developer. Discover full-stack applications built with React, Node.js, MongoDB, and more.",
   keywords: [
     "Md Hujaifa Islam Shanto",
     "Mr Hujaifa",
-    "MERN Stack Projects",
+    "Full Stack Software Projects",
     "React Projects",
     "Full Stack Portfolio",
     "Node.js Projects",
@@ -23,7 +23,7 @@ export const metadata = {
     "Portfolio Projects",
   ],
   openGraph: {
-    title: "Md Hujaifa Islam Shanto | Projects - MERN Stack Developer",
+    title: "Md Hujaifa Islam Shanto | Projects - Full Stack Software Developer",
     description:
       "Dive into the portfolio projects of Md Hujaifa Islam Shanto, including e-commerce platforms, booking apps, donation systems, and real-world full-stack applications.",
     url: "https://mrhujaifa.vercel.app/projects",

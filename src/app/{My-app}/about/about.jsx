@@ -18,7 +18,7 @@ const socialLinks = [
     href: "mailto:mdhujaifaislamshanto@gmail.com",
     icon: (
       <Image
-        src="/icons/gmail.png" // ✅ goes in public/images/
+        src="/icons/gmail.png"
         alt="Gmail"
         width={20}
         height={20}
@@ -119,7 +119,7 @@ export default function About() {
                 />
               </h2>
               <p className="text-sm md:text-base text-indigo-400 tracking-wider font-medium uppercase">
-                MERN Stack Developer · UI/UX Problem Solver
+                Full Stack Software Developer · UI/UX Problem Solver
               </p>
             </div>
 
@@ -128,7 +128,7 @@ export default function About() {
               <p className="text-gray-300 text-[17px] leading-relaxed font-light">
                 <Typewriter
                   words={[
-                    "A passionate MERN Stack Developer with a focus on creating efficient, scalable web applications that deliver exceptional user experiences.",
+                    "A passionate Full Stack Software Developer with a focus on creating efficient, scalable web applications that deliver exceptional user experiences.",
                   ]}
                   loop={1}
                   cursor
