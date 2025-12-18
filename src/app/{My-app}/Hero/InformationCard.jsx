@@ -33,7 +33,7 @@ const ProfileInformation = () => {
             <p className="ml-4">
               <span className="text-blue-300">title</span>:{" "}
               <span className="text-green-400">
-                'Full Stack Software developer | Frontend Developer | Problem Solver'
+                'Full Stack Software Developer | Quick Learner | Problem Solver'
               </span>
               ,
             </p>
@@ -42,20 +42,14 @@ const ProfileInformation = () => {
               <span className="text-blue-300">skills</span>: [
             </p>
             <p className="ml-8">
-              <span className="text-green-400">'React'</span>,{" "}
+              <span className="text-green-400">'ReactJS'</span>,{" "}
               <span className="text-green-400">'NextJS'</span>,{" "}
+              <span className="text-green-400">'TypeScript'</span>,{" "}
               <span className="text-green-400">'ExpressJS'</span>,{" "}
-              <span className="text-green-400">'MongoDB'</span>,{" "}
-              <span className="text-green-400">'Material UI'</span>,{" "}
               <span className="text-green-400">'NodeJS'</span>,
-            </p>
-            <p className="ml-8">
-              <span className="text-green-400">'Css'</span>,{" "}
-              <span className="text-green-400">'Html'</span>,{" "}
-              <span className="text-green-400">'Tailwind CSS'</span>,
-            </p>
-            <p className="ml-8">
-              <span className="text-green-400">'Git'</span>,{" "}
+              <span className="text-green-400">'Prisma'</span>,
+              <span className="text-green-400">'PostgreSQL'</span>,{" "}
+              <span className="text-green-400">'MongoDB'</span>,{" "}
             </p>
             <p className="ml-4">],</p>
 
@@ -128,7 +122,7 @@ const ProfileInformation = () => {
             </p>
             <p className="ml-4">
               <span className="text-blue-300">yearsOfExperience</span>:{" "}
-              <span className="text-yellow-400 font-semibold">1+</span>,
+              <span className="text-yellow-400 font-semibold">1.5+</span>,
             </p>
 
             <p>{"}"}</p>

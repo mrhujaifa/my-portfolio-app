@@ -12,6 +12,8 @@ const lobster = Lobster({
 });
 
 import Image from "next/image";
+import Link from "next/link";
+import PrimaryButton from "@/app/Components/PrimaryBtn";
 
 const socialLinks = [
   {
@@ -78,17 +80,18 @@ export default function About() {
           className="w-11"
         />
         <h1
-          className={` font-bold text-3xl md:text-5xl lg:text-5xl font-bold bg-gradient-to-r from-[#0192b0] via-[#5073f6] to-[#8b6efa] bg-clip-text text-transparent text-center my-5 ${lobster.className}`}
+          className={`font-bold text-3xl md:text-5xl lg:text-5xl bg-gradient-to-r from-[#0192b0] via-[#5073f6] to-[#8b6efa] bg-clip-text text-transparent text-center my-5 ${lobster.className}`}
         >
           About me
         </h1>
-      </div>{" "}
+      </div>
       <section
         id="about"
         className="px-4 lg:px-6 lg:py-5 flex items-center justify-center"
       >
         <div className="container w-full flex flex-col md:flex-row items-center gap-10 border border-[#2a0e61] py-8 px-5 md:p-12 rounded-xl">
           {/* Profile Image with animated border */}
+
           <motion.div
             initial={{ boxShadow: "0 0 10px rgba(42,14,97,0.4)" }}
             whileHover={{ boxShadow: "0 0 30px 4px rgba(99,102,241,0.8)" }}
@@ -119,7 +122,7 @@ export default function About() {
                 />
               </h2>
               <p className="text-sm md:text-base text-indigo-400 tracking-wider font-medium uppercase">
-                Full Stack Software Developer · UI/UX Problem Solver
+                Full Stack Software Developer
               </p>
             </div>
 
@@ -128,7 +131,22 @@ export default function About() {
               <p className="text-gray-300 text-[17px] leading-relaxed font-light">
                 <Typewriter
                   words={[
-                    "A passionate Full Stack Software Developer with a focus on creating efficient, scalable web applications that deliver exceptional user experiences.",
+                    "I am a Full Stack Software Developer dedicated to building scalable, high-performance web applications. I specialize in transforming complex business requirements into seamless digital experiences through modern architecture. My focus is on writing clean, maintainable code and optimizing systems for maximum efficiency, ensuring every solution is built for long-term growth and reliability.",
+                  ]}
+                  loop={1}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={30}
+                  deleteSpeed={20}
+                  delaySpeed={3000}
+                />
+              </p>
+            </div>
+            <div className="border-l-4 border-indigo-500 pl-5">
+              <p className="text-gray-300 text-[17px] leading-relaxed font-light">
+                <Typewriter
+                  words={[
+                    "I focus on writing clean, maintainable code and building reliable systems. ",
                   ]}
                   loop={1}
                   cursor
@@ -157,16 +175,14 @@ export default function About() {
             <div>
               <h3
                 className="
-    flex items-center gap-2
-    text-xl font-semibold text-white
-    border-l-4 border-indigo-500 pl-5
-
-  "
+                  flex items-center gap-2 text-xl font-semibold text-white border-l-4 border-indigo-500 pl-5"
               >
                 More Information
               </h3>
 
-              <div className="flex items-center gap-3 mt-4">
+              <div className="flex items-center  gap-3 mt-4">
+                {/* Social Media */}
+
                 {socialLinks.map(
                   (
                     { href, icon, title, bgGradient, glowColor, textColor },
@@ -181,35 +197,73 @@ export default function About() {
                       className="group relative cursor-pointer"
                     >
                       <div
-                        className={`
-            w-10 h-10 flex items-center justify-center rounded-full
-            ${bgGradient} ${textColor}
-            shadow-md
-            transition duration-300
-            hover:scale-110
-            hover:shadow-lg
-            ${glowColor}
-          `}
+                        className={`w-10 h-10 flex items-center justify-center rounded-full ${bgGradient} ${textColor}
+                                    shadow-md
+                                    transition duration-300
+                                    hover:scale-110
+                                    hover:shadow-lg
+                                    ${glowColor}`}
                       >
                         {icon}
                       </div>
 
                       {/* Tooltip */}
                       <span
-                        className="
-            absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
-            bg-[#1f1f2e] text-white text-xs font-medium rounded-md
-            px-3 py-1 opacity-0 pointer-events-none
-            group-hover:opacity-100 transition-opacity duration-300
-            whitespace-nowrap
-          "
+                        className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
+                                  bg-[#1f1f2e] text-white text-xs font-medium rounded-md
+                                   px-3 py-1 opacity-0 pointer-events-none
+                                   group-hover:opacity-100 transition-opacity duration-300
+                                   whitespace-nowrap"
                       >
                         {title}
                       </span>
                     </a>
                   )
                 )}
+
+                <div className="hidden lg:block px-8">
+                  <PrimaryButton
+                    href={"skill"}
+                    text={"Resume"}
+                    icon={
+                      <svg
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                    }
+                    target="_blank"
+                  />
+                </div>
               </div>
+              <div className="lg:hidden md:hidden">
+                  <PrimaryButton
+                    href={"skill"}
+                    text={"Resume"}
+                    icon={
+                      <svg
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                    }
+                    target="_blank"
+                  />
+                </div>
             </div>
           </div>
         </div>
