@@ -6,8 +6,9 @@ import { useFrame } from "@react-three/fiber";
 
 export default function StarBackground(props) {
   const ref = useRef(null);
+  const starCount = 3600;
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
+    random.inSphere(new Float32Array(starCount * 3), { radius: 1.2 })
   );
 
   useFrame(({ clock }, delta) => {

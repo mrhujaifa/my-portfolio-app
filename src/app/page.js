@@ -1,36 +1,54 @@
-import React from "react";
 import Hero from "./{My-app}/Hero/Hero";
-
 
 import About from "./{My-app}/about/about";
 import Services from "./Components/Services";
-import CallToAction from "./Components/CallToAction";
 import Footer from "./Components/Footer";
-
-
+import EducationShowcase from "@/components/modules/education/page";
+import SkillsShowcase from "@/components/modules/skills/SkillsShowcase";
+import ProjectsShowcase from "@/components/modules/projects/projects";
+import Contact from "@/components/modules/contact/Contact";
 
 const page = () => {
   return (
     <div>
-      <div className="container mx-auto">
-        <Hero></Hero>
-      </div>
-      
+      <section
+        id="home"
+        className="container mx-auto scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36"
+      >
+        <Hero />
+      </section>
+
+      <About />
+
+      <SkillsShowcase />
+
+      <section
+        id="education"
+        className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36"
+      >
+        <EducationShowcase />
+      </section>
+
+      <section
+        id="projects"
+        className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36"
+      >
+        <ProjectsShowcase />
+      </section>
+
       <div>
-        <About></About>
+        <Services />
       </div>
+
+      <section
+        id="contact"
+        className="container mx-auto scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36"
+      >
+        <Contact />
+      </section>
+
       <div>
-        <Services></Services>
-      </div>
-      <div>
-        <CallToAction> </CallToAction>
-      </div>
-      
-      {/* <div className="container mx-auto">
-        <Test></Test>
-      </div> */}
-      <div>
-        <Footer></Footer>
+        <Footer />
       </div>
     </div>
   );

@@ -170,7 +170,7 @@ function SectionCard({ title, icon, pills, image, description, liveLink }) {
   );
 }
 
-export default function SkillsShowcase() {
+export default function ProjectsShowcase() {
   const sections = [
     {
       title: "Blood Donation",

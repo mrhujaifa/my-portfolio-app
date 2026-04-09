@@ -1,10 +1,7 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import StarBackground from "./StarBackground";
-
-
 
 const StarsCanvas = () => {
   return (

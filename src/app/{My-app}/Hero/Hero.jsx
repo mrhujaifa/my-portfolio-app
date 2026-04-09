@@ -5,6 +5,8 @@ import styles from "./Hero.module.css";
 import AutoTyping from "./TextTyping";
 import ProfileCard from "./InformationCard";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 
 const Hero = () => {
   return (
@@ -69,29 +71,7 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <div className="mt-10 lg:mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
-            {/* Learn More Button */}
-            <Link
-              href={"https://github.com/mrhujaifa"}
-              className={`relative w-full sm:w-auto text-center px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
-                          bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5]
-                          shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
-                          focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`}>
-              <div className="relative z-10">Learn More</div>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5] blur opacity-50 rounded-2xl"></span>
-            </Link>
-
-            {/* Resume Button */}
-            <Link
-              href="/contact"
-              className={`relative w-full text-center sm:w-auto px-6 py-3 sm:py-4 font-semibold text-white rounded-2xl 
-                          bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5]
-                          shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
-                          focus:outline-none focus:ring-4 focus:ring-[#a268ff] focus:ring-opacity-50`} >
-              <div className="relative z-10">Hire me</div>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#a268ff] via-[#5b77f2] to-[#00b3e5] blur opacity-50 rounded-2xl"></span>
-            </Link>
-          </div>
+         <ActionButtons/>
         </div>
 
         {/* Right side card */}
@@ -104,3 +84,88 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
+
+
+const buttons = [
+  { label: "Learn more", href: "https://github.com/mrhujaifa" },
+  { label: "Hire me", href: "/#contact" },
+];
+
+const shineVariant = {
+  initial: {
+    x: "-160%",
+    opacity: 0,
+  },
+  animate: {
+    x: "240%",
+    opacity: [0, 0.2, 0.85, 0.2, 0],
+    transition: {
+      duration: 1.5,
+      repeat: Infinity,
+      repeatDelay: 1.4,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const ActionButtons = () => {
+  return (
+    <div className="mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4">
+      {buttons.map((btn, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ y: -2, scale: 1.015 }}
+          whileTap={{ scale: 0.98 }}
+          className="group relative w-full sm:w-auto"
+        >
+          <Link
+            href={btn.href}
+            target={btn.href.startsWith("http") ? "_blank" : "_self"}
+            className="relative flex w-full sm:w-auto min-w-0 sm:min-w-[190px] items-center justify-center overflow-hidden rounded-[20px] px-8 py-4 sm:px-10"
+          >
+            {/* soft outer glow */}
+            <span className="pointer-events-none absolute inset-0 rounded-[20px] bg-[linear-gradient(90deg,rgba(157,78,255,0.18),rgba(67,97,238,0.14),rgba(0,212,255,0.18))] blur-xl opacity-60 transition-all duration-500 group-hover:opacity-100" />
+
+            {/* REAL gradient border only */}
+            <span
+              className="pointer-events-none absolute inset-0 rounded-[20px] p-[1.2px]"
+              style={{
+                background:
+                  "linear-gradient(120deg, rgba(168,111,255,1), rgba(101,116,255,0.95), rgba(0,225,255,0.95), rgba(168,111,255,1))",
+                WebkitMask:
+                  "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                WebkitMaskComposite: "xor",
+                maskComposite: "exclude",
+              }}
+            />
+
+            {/* subtle inner border light */}
+            <span className="pointer-events-none absolute inset-[1px] rounded-[19px] border border-white/10" />
+
+            {/* top glass reflection */}
+            <span className="pointer-events-none absolute left-[8%] top-[1px] h-[38%] w-[84%] rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0.05),transparent)] blur-md" />
+
+            {/* moving glass shine */}
+            <motion.span
+              variants={shineVariant}
+              initial="initial"
+              animate="animate"
+              className="pointer-events-none absolute top-[-30%] h-[170%] w-16 sm:w-20 rotate-[24deg] bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,0.7),rgba(255,255,255,0))] blur-[10px]"
+            />
+
+            {/* inner edge glow */}
+            <span className="pointer-events-none absolute inset-0 rounded-[20px] shadow-[inset_0_0_22px_rgba(129,90,255,0.12)] transition-all duration-500 group-hover:shadow-[inset_0_0_28px_rgba(129,90,255,0.2)]" />
+
+            <span className="relative z-10 text-[15px] sm:text-base font-semibold tracking-[0.02em] text-white">
+              {btn.label}
+            </span>
+          </Link>
+        </motion.div>
+      ))}
+    </div>
+  );
+};

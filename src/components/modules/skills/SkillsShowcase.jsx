@@ -18,12 +18,11 @@ function Pill({ icon, label }) {
       <span
         className="
           grid h-6 w-6 place-items-center overflow-hidden
-            
           shadow-sm
         "
       >
         {icon ? (
-          <Image src={icon} alt={label} width={17} height={17} className="" />
+          <Image src={icon} alt={label} width={16} height={16} className="" />
         ) : null}
       </span>
       {label}
@@ -33,7 +32,7 @@ function Pill({ icon, label }) {
 
 /** --- Fancy interactive card with lighting/tilt/shine/border --- */
 function SectionCard({ title, icon, pills }) {
-  const CARD_HEIGHT = 250; // same height for all cards (px)
+  const CARD_HEIGHT = 300; // same height for all cards (px)
 
   const cardRef = useRef(null);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
@@ -182,8 +181,7 @@ export default function SkillsShowcase() {
         { label: "HTML5", icon: "/skills/html.png" },
         { label: "CSS3", icon: "/skills/css.png" },
         { label: "JavaScript", icon: "/skills/js.png" },
-        { label: "TypeScript", icon: "/skills/typescript.png" },
-        { label: "React.js", icon: "/skills/react.png" },
+        { label: "React", icon: "/skills/react.png" },
         { label: "Next.js", icon: "/skills/nextjs.webp" },
         { label: "React Router", icon: "/skills/react-router.webp" },
         { label: "Tailwind CSS", icon: "/skills/tailwind.png" },
@@ -195,12 +193,9 @@ export default function SkillsShowcase() {
       pills: [
         { label: "Node.js", icon: "/skills/node.png" },
         { label: "Express.js", icon: "/skills/express.png" },
-        { label: "Prisma", icon: "/skills/prisma.svg" },
-        { label: "PostgreSQL", icon: "/skills/postgre.png" },
         { label: "MongoDB", icon: "/skills/mongodb.png" },
-        { label: "Stripe", icon: "/skills/Stripe.png" },
+        { label: "Stripe", icon: "/skills/stripe.png" },
         { label: "Jwt", icon: "/skills/jwt.png" },
-        { label: "Axios", icon: "/skills/axios.png" },
       ],
     },
     {
@@ -218,7 +213,7 @@ export default function SkillsShowcase() {
         { label: "VS Code", icon: "/skills/vscode.png" },
         { label: "Firebase", icon: "/skills/firebase.png" },
         { label: "Vercel", icon: "/skills/vercel.svg" },
-        { label: "Vite", icon: "/skills/vite.png"},
+        { label: "Vite", icon: "/skills/vite.png" },
         { label: "Netlify", icon: "/skills/netlify.svg" },
       ],
     },
@@ -238,17 +233,17 @@ export default function SkillsShowcase() {
   ];
 
   return (
-    <div className="mt-60 lg:mt-85">
+    <section id="skills" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36">
       <SkillSectionTitle></SkillSectionTitle>
       <section className="relative isolate">
         {/* ambient glow background */}
         <div
           aria-hidden
           className="
-          pointer-events-none absolute inset-0 -z-10
-        "
+            pointer-events-none absolute inset-0 -z-10
+          "
         />
-        <div className="mx-auto container px-4 py-6 sm:px-6 lg:px-0">
+        <div className="mx-auto container px-4 py-14 lg:px-0">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {sections.map((s) => (
               <SectionCard key={s.title} {...s} />
@@ -256,6 +251,6 @@ export default function SkillsShowcase() {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 }

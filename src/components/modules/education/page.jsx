@@ -195,10 +195,8 @@ export default function EducationShowcase() {
   
 
   return (
-    <div className="mt-55 lg:mt-85">
-      <h2 className="mb-2 text-center">
-        <EducationTitle></EducationTitle>
-      </h2>
+    <div className="">
+      <EducationTitle />
       <section className="mx-auto container px-4 py-8 sm:px-6 lg:px-0">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-2">
           {educationList.map((edu) => (

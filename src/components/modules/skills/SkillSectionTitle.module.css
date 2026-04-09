@@ -30,15 +30,3 @@
   50% { transform: translateY(-5px); }
 }
 
-.animateTitleShine {
-  animation: title-shine 1.8s ease-in-out infinite;
-}
-.animateFloat1 {
-  animation: float-1 3.2s ease-in-out infinite;
-}
-.animateFloat2 {
-  animation: float-2 3.8s ease-in-out infinite;
-}
-.animateFloat3 {
-  animation: float-3 3.5s ease-in-out infinite;
-}

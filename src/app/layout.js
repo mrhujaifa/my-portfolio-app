@@ -1,10 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "lenis/dist/lenis.css";
 import SpaceBackground from "./{My-app}/animation/animation";
 import Navbar from "./{My-app}/Navbar/Navbar";
 import NavAnimation from "./{My-app}/NavAnimation/NavAnimation";
 import CustomCursor from "./Components/CustomCursor";
 import UltraAdvancedSpaceCursor from "./Components/CustomCursor";
+import LenisProvider from "./Components/LenisProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -215,6 +217,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#301403]`}
       >
+        <LenisProvider>
         {/* 🎇 Background Fixed Space Animation */}
         <div className="fixed inset-0 -z-10">
           <SpaceBackground />
@@ -239,6 +242,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
         <main className="relative z-10">{children}</main>
+        </LenisProvider>
       </body>
     </html>
   );

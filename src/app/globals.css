@@ -19,6 +19,10 @@
   }
 }
 
+html {
+  scroll-behavior: auto;
+}
+
 body {
   background: #040014;
   color: var(--foreground);

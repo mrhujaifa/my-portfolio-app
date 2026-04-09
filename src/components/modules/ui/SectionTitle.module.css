@@ -1,0 +1,27 @@
+﻿@keyframes section-title-shine {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateX(150%);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .titleShine {
+    animation: none !important;
+  }
+}
+
+.titleShine {
+  animation: section-title-shine 4s ease-in-out infinite;
+}
