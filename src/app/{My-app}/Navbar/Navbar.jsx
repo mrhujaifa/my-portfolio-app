@@ -164,7 +164,7 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-3 lg:gap-4 text-white">
             <a
-              href="/resume/Md. Hujaifa Islam Shanto.pdf"
+              href="/resume/mr-hujaifa-resume.pdf"
               download
               className="md:hidden lg:flex items-center gap-2 px-5 py-2 border border-purple-600 text-white rounded-lg text-sm font-semibold shadow-lg hover:scale-110 hover:shadow-xl transition-transform duration-300"
               aria-label="Download Resume"
@@ -224,7 +224,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="/resume/Md. Hujaifa Islam Shanto.pdf"
+              href="/resume/mr-hujaifa-resume.pdf"
               download
               className="flex w-full justify-center md:w-full lg:w-full items-center gap-2 px-4 py-2 border border-purple-600 text-white rounded-md shadow-md hover:scale-105 transition-transform"
             >

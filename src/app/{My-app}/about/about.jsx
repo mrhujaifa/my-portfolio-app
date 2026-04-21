@@ -180,7 +180,7 @@ export default function About() {
                 )}
 
                 <div className="hidden lg:block px-8">
-                  <a href="/resume/Md. Hujaifa Islam Shanto.pdf" download={true}>
+                  <a href="/resume/mr-hujaifa-resume.pdf" download={true}>
                     <PrimaryButton
                       text={"Resume"}
                       icon={
@@ -203,7 +203,7 @@ export default function About() {
               </div>
 
               <div className="lg:hidden md:hidden mt-5">
-                <a href="/resume/Md. Hujaifa Islam Shanto.pdf" download={true}>
+                <a href="/resume/mr-hujaifa-resume.pdf" download={true}>
                   <PrimaryButton
                     text={"Resume"}
                     icon={

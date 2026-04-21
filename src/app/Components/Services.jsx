@@ -53,7 +53,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: index * 0.12, duration: 0.5 }}
-              className="group relative overflow-hidden rounded-2xl border border-[#2a0e61] bg-[#07041b]/60 p-6 sm:p-7 transition duration-300 hover:shadow-[0_0_40px_rgba(60,130,246,0.35)] hover:scale-[1.02]"
+              className="group relative overflow-hidden rounded-2xl border border-[#2a0e61] p-6 sm:p-7 transition duration-300 hover:shadow-[0_0_40px_rgba(60,130,246,0.35)] hover:scale-[1.02]"
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#3c82f6]/60 to-transparent" />
               <div className="absolute -left-10 top-6 h-24 w-24 rounded-full bg-[#3c82f6]/10 blur-3xl transition duration-500 group-hover:bg-[#3c82f6]/20" />
