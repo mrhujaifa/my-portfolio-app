@@ -172,6 +172,31 @@ function SectionCard({ title, icon, pills, image, description, liveLink }) {
 
 export default function ProjectsShowcase() {
   const sections = [
+   {
+  title: "PrimeHacks",
+  icon: "/icons/event.png",
+  image: "/projects/primehacks.png",
+  description:
+    "PrimeHacks is a full-stack hackathon management platform where users can explore hackathons, submit projects, and manage participation seamlessly. Organizers can create and manage hackathons, while admins can monitor activities, review submissions, and control platform access through a role-based dashboard.",
+  liveLink: "https://primehacks.vercel.app",
+  pills: [
+    { icon: "/skills/typescript.png", label: "TypeScript" },
+    { icon: "/skills/nextjs.webp", label: "Next.js" },
+    { icon: "/skills/tailwind.png", label: "Tailwind CSS" },
+    { icon: "/skills/shadcn.png", label: "shadcn/ui" },
+    { icon: "/skills/betterAuth.png", label: "BetterAuth" },
+    { icon: "/skills/tanstack.png", label: "TanStack Query" },
+    { icon: "/skills/zod.png", label: "Zod" },
+    { icon: "/skills/axios.png", label: "Axios" },
+    { icon: "/skills/node.png", label: "Node.js" },
+    { icon: "/skills/express.png", label: "Express.js" },
+    { icon: "/skills/prisma.png", label: "Prisma" },
+    { icon: "/skills/postgre.png", label: "PostgreSQL" },
+    { icon: "/skills/stripe.png", label: "Stripe" },
+    { icon: "/skills/vercel.png", label: "Vercel" },
+  ],
+},
+
     {
       title: "Blood Donation",
       icon: "/icons/event.png",
