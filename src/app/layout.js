@@ -25,7 +25,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Md. Hujaifa Islam Shanto — Full Stack Devloper | Mr. Hujaifa",
+  title: "Md. Hujaifa Islam Shanto — Full Stack Developer",
   description:
     "Official portfolio of Md. Hujaifa Islam Shanto (Mr. Hujaifa) , a professional Full Stack Developer from Bangladesh. Explore advanced React.js, Node.js, Express.js, MongoDB projects, blog, and contact info.",
   keywords: [
@@ -107,9 +107,15 @@ export const metadata = {
     "md. hujaifa",
     "hujaifa",
     "huzaifa",
+    "react developer hujaifa",
+    "next js developer hujaifa",
+    "golang developer hujaifa",
+    "backend developer hujaifa",
     "huzaifa islam",
     "hujaifa islam",
     "hujaifa dev",
+    "হুযাইফা ইসলাম", 
+    "মোঃ হুযাইফা ইসলাম শান্ত",
   ],
   authors: [
     { name: "Md. Hujaifa Islam Shanto", url: "https://mrhujaifa.vercel.app" },
@@ -144,7 +150,7 @@ export const metadata = {
 
   openGraph: {
     title:
-      "Md. Hujaifa Islam Shanto — Full Stack Developer | Professional Portfolio",
+      "Md. Hujaifa Islam Shanto — Full Stack Developer ",
     description:
       "Explore the professional portfolio of Md. Hujaifa Islam Shanto, a Full Stack Developer specializing in React, Node, Express, MongoDB, and Next.js.",
     url: "https://mrhujaifa.vercel.app",
@@ -154,7 +160,7 @@ export const metadata = {
         url: "https://mrhujaifa.vercel.app/images/about-img.png",
         width: 1200,
         height: 630,
-        alt: "Md. Hujaifa Islam Shanto - Full Stack Developer Portfolio",
+        alt: "Md. Hujaifa Islam Shanto - Full Stack Developer",
         type: "image/png",
       },
     ],
@@ -164,7 +170,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Md. Hujaifa Islam Shanto — Full Stack Developer | Portfolio",
+    title: "Md. Hujaifa Islam Shanto — Full Stack Developer",
     description:
       "Portfolio website of Full Stack Developer Md. Hujaifa Islam Shanto (Mr. Hujaifa). Check out projects, skills, and contact information.",
     site: "@Hujaifa__Islam",
