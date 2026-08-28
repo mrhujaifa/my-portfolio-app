@@ -196,7 +196,7 @@ export default function SkillsShowcase() {
       title: "Frontend Development",
       icon: "/skills/frontend.png",
       pills: [
-        { label: "HTML5", icon: "/skills/html.png" },
+        { label: "HTML", icon: "/skills/html.png" },
         { label: "CSS3", icon: "/skills/css.png" },
         { label: "JavaScript", icon: "/skills/js.png" },
         { label: "TypeScript", icon: "/skills/typescript.png" },

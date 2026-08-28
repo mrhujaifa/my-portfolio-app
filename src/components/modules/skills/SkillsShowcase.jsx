@@ -174,64 +174,76 @@ function SectionCard({ title, icon, pills }) {
 
 export default function SkillsShowcase() {
   const sections = [
-    {
-      title: "Frontend Development",
-      icon: "/skills/frontend.png",
-      pills: [
-        { label: "HTML5", icon: "/skills/html.png" },
-        { label: "CSS3", icon: "/skills/css.png" },
-        { label: "JavaScript", icon: "/skills/js.png" },
-        { label: "React", icon: "/skills/react.png" },
-        { label: "Next.js", icon: "/skills/nextjs.webp" },
-        { label: "React Router", icon: "/skills/react-router.webp" },
-        { label: "Tailwind CSS", icon: "/skills/tailwind.png" },
-      ],
-    },
-    {
-      title: "Backend Development",
-      icon: "/skills/backend.png",
-      pills: [
-        { label: "Node.js", icon: "/skills/node.png" },
-        { label: "Express.js", icon: "/skills/express.png" },
-        { label: "MongoDB", icon: "/skills/mongodb.png" },
-        { label: "Stripe", icon: "/skills/stripe.png" },
-        { label: "Jwt", icon: "/skills/jwt.png" },
-      ],
-    },
-    {
-      title: "UI/UX Design",
-      icon: "/skills/ui-ux.png",
-      pills: [
-        { label: "Figma", icon: "/skills/figma.png" },
-        { label: "Responsive Design", icon: "/skills/responsive.png" },
-      ],
-    },
-    {
-      title: "Tools & Technologies",
-      icon: "/skills/tools.png",
-      pills: [
-        { label: "VS Code", icon: "/skills/vscode.png" },
-        { label: "Firebase", icon: "/skills/firebase.png" },
-        { label: "Vercel", icon: "/skills/vercel.svg" },
-        { label: "Vite", icon: "/skills/vite.png" },
-        { label: "Netlify", icon: "/skills/netlify.svg" },
-      ],
-    },
-    {
-      title: "Cloud & DevOps",
-      icon: "/skills/cloud.png",
-      pills: [{ label: "Git", icon: "/skills/git.png" }],
-    },
-    {
-      title: "Creative Skills",
-      icon: "/skills/creative.png",
-      pills: [
-        { label: "UI Animation", icon: "/skills/animate.png" },
-        { label: "Motion Animation", icon: "/skills/motion.png" },
-      ],
-    },
-  ];
-
+  {
+    title: "Frontend Development",
+    icon: "/skills/frontend.png",
+    pills: [
+      { label: "JavaScript", icon: "/skills/js.png" },
+      { label: "TypeScript", icon: "/skills/typescript.png" },
+      { label: "React", icon: "/skills/react.png" },
+      { label: "Next.js", icon: "/skills/nextjs.webp" },
+      { label: "React Router", icon: "/skills/react-router.webp" },
+      { label: "Tailwind CSS", icon: "/skills/tailwind.png" },
+      { label: "DaisyUI", icon: "/skills/daisyui.png" },
+      { label: "Shadcn", icon: "/skills/shadcn.png" },
+      { label: "TanStack Query", icon: "/skills/tanstack.png" },
+      { label: "Zod", icon: "/skills/zod.png" },
+      { label: "Axios", icon: "/skills/axios.png" },
+    ],
+  },
+  {
+    title: "Backend Development",
+    icon: "/skills/backend.png",
+    pills: [
+      { label: "Node.js", icon: "/skills/node.png" },
+      { label: "Express.js", icon: "/skills/express.png" },
+      { label: "REST API", icon: "/skills/restapi.png" },
+      { label: "PostgreSQL", icon: "/skills/postgre.png" },
+      { label: "MongoDB", icon: "/skills/mongodb.png" },
+      { label: "Prisma ORM", icon: "/skills/prisma.png" },
+      { label: "Jwt", icon: "/skills/jwt.png" },
+      { label: "Supabase", icon: "/skills/supabase.png" },
+      { label: "Firebase", icon: "/skills/firebase.png" },
+      { label: "Better Auth", icon: "/skills/betterauth.png" },
+    ],
+  },
+  {
+    title: "Payments & Web3",
+    icon: "/skills/web3.png",
+    pills: [
+      { label: "Circle", icon: "/skills/circle.png" },
+      { label: "Stripe", icon: "/skills/stripe.png" },
+      { label: "Viem", icon: "/skills/viem.png" },
+      { label: "Privy Auth", icon: "/skills/privy.png" },
+    ],
+  },
+  {
+    title: "Tools & Technologies",
+    icon: "/skills/tools.png",
+    pills: [
+      { label: "VS Code", icon: "/skills/vscode.png" },
+      { label: "Vercel", icon: "/skills/vercel.svg" },
+      { label: "Vite", icon: "/skills/vite.png" },
+      { label: "Netlify", icon: "/skills/netlify.svg" },
+      { label: "Docker", icon: "/skills/docker.png" },
+      { label: "Render", icon: "/skills/render.png" },
+      { label: "Postman", icon: "/skills/postman.png" },
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    icon: "/skills/cloud.png",
+    pills: [{ label: "Git", icon: "/skills/git.png" }],
+  },
+  {
+    title: "Creative Skills",
+    icon: "/skills/creative.png",
+    pills: [
+      // { label: "UI Animation", icon: "/skills/animate.png" },
+      // { label: "Motion Animation", icon: "/skills/motion.png" },
+    ],
+  },
+];
   return (
     <section id="skills" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36">
       <SkillSectionTitle></SkillSectionTitle>

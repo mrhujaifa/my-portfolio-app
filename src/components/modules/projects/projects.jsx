@@ -172,6 +172,30 @@ function SectionCard({ title, icon, pills, image, description, liveLink }) {
 
 export default function ProjectsShowcase() {
   const sections = [
+  {
+  title: "Novapilot",
+  icon: "/icons/ai.png",
+  image: "/projects/novapilot.png",
+  description:"Novapilot is a unified AI and API platform built on Circle’s Arc network, allowing users to access multiple AI models and developer APIs through a single USDC balance. Users can connect their wallet, deposit USDC, use AI models, subscribe to APIs, and pay automatically based on usage. It also includes usage tracking, transaction history, API subscriptions, pricing management, and secure wallet-based payments.", 
+  liveLink: "https://novapilotai.vercel.app",
+  pills: [
+    { icon: "/skills/typescript.png", label: "TypeScript" },
+    { icon: "/skills/nextjs.webp", label: "Next.js" },
+    { icon: "/skills/tailwind.png", label: "Tailwind CSS" },
+    { icon: "/skills/shadcn.png", label: "shadcn/ui" },
+    { icon: "/skills/privy.png", label: "Privy" },
+    { icon: "/skills/tanstack.png", label: "TanStack Query" },
+    { icon: "/skills/zod.png", label: "Zod" },
+    { icon: "/skills/axios.png", label: "Axios" },
+    { icon: "/skills/circle.png", label: "Circle" },
+    { icon: "/skills/node.png", label: "Node.js" },
+    { icon: "/skills/express.png", label: "Express.js" },
+    { icon: "/skills/prisma.png", label: "Prisma" },
+    { icon: "/skills/postgre.png", label: "PostgreSQL" },
+    { icon: "/skills/redis.png", label: "Redis" },
+    { icon: "/skills/vercel.png", label: "Vercel" },
+  ],
+},
    {
   title: "PrimeHacks",
   icon: "/icons/event.png",

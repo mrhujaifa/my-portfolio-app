@@ -66,7 +66,7 @@ export default function About() {
         className="mt-16 sm:mt-20 mb-10 sm:mb-12"
         eyebrow="Who I Am"
         title="About Me"
-        subtitle="I build responsive, high-performing web apps with modern React and Next.js."
+        subtitle="Software Engineer specializing in Next.js and TypeScript, building scalable full-stack systems."
         iconSrc="/images/about (1).png"
         iconAlt="About me"
       />
@@ -104,7 +104,7 @@ export default function About() {
                 />
               </h2>
               <p className="text-sm md:text-base text-indigo-400 tracking-wider font-medium uppercase">
-                Full Stack Software Developer
+                Software Engineer
               </p>
             </div>
 
@@ -112,7 +112,7 @@ export default function About() {
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
                 <Typewriter
                   words={[
-                    "I build responsive, high-performing web apps with clean UI and practical architecture.",
+                    "I design and build systems — not just interfaces — with an emphasis on correctness and maintainability.",
                   ]}
                   loop={1}
                   cursor
@@ -128,7 +128,7 @@ export default function About() {
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
                 <Typewriter
                   words={[
-                    "I focus on clean code, reliable systems, and smooth user experiences.",
+                    "Recent work includes a multi-provider AI API gateway with usage-metered billing, and role-gated platforms with isolated access control.",
                   ]}
                   loop={1}
                   cursor
@@ -145,8 +145,13 @@ export default function About() {
                 Development Philosophy
               </h3>
               <p className="mt-3 text-sm sm:text-base text-gray-400 leading-7 tracking-wide">
-                I blend design clarity with strong engineering to build products
-                that are scalable, maintainable, and useful.
+                I think in terms of trade-offs, not just features: how a
+                system behaves under failure, how it scales, and how easy
+                it is for the next engineer to reason about. I don't have a
+                formal CS background — I closed that gap through deliberate,
+                structured study of data structures, system design, and
+                production engineering practices, and I apply that rigor to
+                every project I ship.
               </p>
             </div>
 
